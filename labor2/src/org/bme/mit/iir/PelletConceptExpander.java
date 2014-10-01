@@ -51,8 +51,6 @@ public class PelletConceptExpander {
 					+ e.getMessage());
 			System.exit(-1);
 		}
-		System.out.println("Ontológia betöltve: " + 
-				manager.getOntologyDocumentIRI(ontology));
 		OWLReasonerFactory reasonerFactory = new PelletReasonerFactory();
 
 		reasoner = reasonerFactory.createReasoner(ontology);
@@ -73,14 +71,17 @@ public class PelletConceptExpander {
 		factory = manager.getOWLDataFactory();
 	}
 
-	private Set<OWLClass> getSubClasses(String className, boolean direct) {
-
+	private OWLClass getClassFromName(String className)
+	{
 		IRI clsIRI = IRI.create(PCSHOP_BASE_URI + className);
 		if (!ontology.containsClassInSignature(clsIRI)) {
-			return Collections.emptySet();
+			return null;
 		}
+		return factory.getOWLClass(clsIRI);
+	}
 
-		OWLClass cls = factory.getOWLClass(clsIRI);
+	private Set<OWLClass> getSubClasses(OWLClass cls, boolean direct) {
+
 		NodeSet<OWLClass> subClss;
 		try {
 			subClss = reasoner.getSubClasses(cls, direct);
@@ -106,15 +107,34 @@ public class PelletConceptExpander {
 		}
 		return Collections.unmodifiableSet(result);
 	}
-	
+
 	public Set<String> expandConcept(String concept, boolean inclAnnotations, boolean inclSubclasses)
 	{
 		Set<String> similarConcepts = new HashSet<String>();
-		
-		Set<OWLClass> descendants  = getSubClasses(concept, false);
-		
+		OWLClass conceptClass = getClassFromName(concept);
+		if(conceptClass != null)
+		{
+
+			if(inclAnnotations)
+			{
+				similarConcepts.addAll(getClassAnnotations(conceptClass));
+			}
+
+			if(inclSubclasses)
+			{
+				Set<OWLClass> descendants  = getSubClasses(conceptClass, false);
+
+				for (OWLClass cls : descendants) {
+					if (!cls.isBuiltIn()) {
+						
+						similarConcepts.add(cls.getIRI().getFragment());
+						if(inclAnnotations)
+							similarConcepts.addAll(getClassAnnotations(cls));
+					}
+				}
+			}
+		}
 		return similarConcepts;
-		
 	}
 
 }

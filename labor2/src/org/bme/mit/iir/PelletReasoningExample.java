@@ -15,7 +15,7 @@ import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 public class PelletReasoningExample {
 
 	public static final String PCSHOP_ONTOLOGY_FNAME = 
-		"c:/temp/pc_shop/pc_shop.owl";
+		"data/pc_shop_0.owl";
 	public static final String PCSHOP_BASE_URI = 
 		"http://mit.bme.hu/ontologia/iir_labor/pc_shop.owl#";
     public static final IRI ANNOTATION_TYPE_IRI =
@@ -48,7 +48,7 @@ public class PelletReasoningExample {
 		}
         System.out.println("Ontológia betöltve: " + 
                 manager.getOntologyDocumentIRI(ontology));
-
+        
         // Létrehozzuk a következtetőgép egy példányát. Mi most a Pellet-et 
         // használjuk, de az OWL API univerzális, másik következtető 
         // használatához csak a Factory osztály nevét kellene kicserélni.
