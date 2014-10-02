@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://home.mit.bme.hu/~fandrew/iir/pc_shop.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://home.mit.bme.hu/~fandrew/iir/pc_shop.owl">
+    <Prefix name="" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="ont" IRI="http://www.co-ode.org/ontologies/ont.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="pc_shop" IRI="http://mit.bme.hu/ontologia/iir_labor/pc_shop.owl#"/>
+    <Declaration>
+        <Class IRI="#AMD_CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ASUS_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ASUS_motherboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ATI_GPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alienware_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Azza_case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoolerMaster_case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DDR2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DDR3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dell_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#External_DataStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genius_mouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genius_webcam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gigabyte_case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gigabyte_motherboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HDD_DataStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HP_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intel_CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intel_i3_CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intel_i5_CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intel_i7_CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Internal_DataStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Java_konfiguracio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LED"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lenovo_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logitech_mouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logitech_webcam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MSI_GPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MSI_motherboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Microsoft_keyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Microsoft_mouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NVIDIA_GPU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protege_konfiguracio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Razor_keyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Razor_mouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SSD_DataStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Toshiba_laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#adattároló"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tápegység"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#video_card"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#webcam"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:CRT"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:LCD"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:alaplap"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:billentyűzet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:monitor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:projektor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:beviteli_eszköze"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="pc_shop:tételei"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="pc_shop:ellenértéke"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="pc_shop:időpontja"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="pc_shop:végösszege"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPU_300MHz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPU_500MHz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gagyi_Konfig"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gagyi_PC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Munka_Konfig"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Munka_PC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#memória_1024MB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ont:CPU_2200MHz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ont:memória_256MB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ont:memória_2GB"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#prefLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Java_konfiguracio"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+                <DataSomeValuesFrom>
+                    <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:int"/>
+                        <FacetRestriction facet="&xsd;minInclusive">
+                            <Literal datatypeIRI="&xsd;integer">300</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Protege_konfiguracio"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+                <DataSomeValuesFrom>
+                    <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:int"/>
+                        <FacetRestriction facet="&xsd;minInclusive">
+                            <Literal datatypeIRI="&xsd;integer">500</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AMD_CPU"/>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ASUS_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ASUS_motherboard"/>
+        <Class abbreviatedIRI="pc_shop:alaplap"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ATI_GPU"/>
+        <Class IRI="#video_card"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alienware_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Azza_case"/>
+        <Class IRI="#case"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoolerMaster_case"/>
+        <Class IRI="#case"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DDR2"/>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DDR3"/>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dell_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#External_DataStorage"/>
+        <Class IRI="#adattároló"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genius_mouse"/>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genius_webcam"/>
+        <Class IRI="#webcam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gigabyte_case"/>
+        <Class IRI="#case"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gigabyte_motherboard"/>
+        <Class abbreviatedIRI="pc_shop:alaplap"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HDD_DataStorage"/>
+        <Class IRI="#adattároló"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HP_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intel_CPU"/>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intel_i3_CPU"/>
+        <Class IRI="#Intel_CPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intel_i5_CPU"/>
+        <Class IRI="#Intel_CPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intel_i7_CPU"/>
+        <Class IRI="#Intel_CPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Internal_DataStorage"/>
+        <Class IRI="#adattároló"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Java_konfiguracio"/>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LED"/>
+        <Class abbreviatedIRI="pc_shop:monitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lenovo_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logitech_mouse"/>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logitech_webcam"/>
+        <Class IRI="#webcam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MSI_GPU"/>
+        <Class IRI="#video_card"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MSI_motherboard"/>
+        <Class abbreviatedIRI="pc_shop:alaplap"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Microsoft_keyboard"/>
+        <Class abbreviatedIRI="pc_shop:billentyűzet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Microsoft_mouse"/>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NVIDIA_GPU"/>
+        <Class IRI="#video_card"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protege_konfiguracio"/>
+        <Class IRI="#Java_konfiguracio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Razor_keyboard"/>
+        <Class abbreviatedIRI="pc_shop:billentyűzet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Razor_mouse"/>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SSD_DataStorage"/>
+        <Class IRI="#adattároló"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Toshiba_laptop"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#adattároló"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#case"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tápegység"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#video_card"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#webcam"/>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:CRT"/>
+        <Class abbreviatedIRI="pc_shop:monitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:LCD"/>
+        <Class abbreviatedIRI="pc_shop:monitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:alaplap"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:billentyűzet"/>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:egér"/>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pc_shop:beviteli_eszköze"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:monitor"/>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:projektor"/>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pc_shop:tételei"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="pc_shop:időpontja"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="pc_shop:végösszege"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#ASUS_laptop"/>
+        <Class IRI="#Alienware_laptop"/>
+        <Class IRI="#Dell_laptop"/>
+        <Class IRI="#HP_laptop"/>
+        <Class IRI="#Lenovo_laptop"/>
+        <Class IRI="#Toshiba_laptop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DDR2"/>
+        <Class IRI="#DDR3"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#External_DataStorage"/>
+        <Class IRI="#Internal_DataStorage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Genius_mouse"/>
+        <Class IRI="#Logitech_mouse"/>
+        <Class IRI="#Microsoft_mouse"/>
+        <Class IRI="#Razor_mouse"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HDD_DataStorage"/>
+        <Class IRI="#SSD_DataStorage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Microsoft_keyboard"/>
+        <Class IRI="#Razor_keyboard"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <Class abbreviatedIRI="pc_shop:laptop"/>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+        <NamedIndividual IRI="#CPU_300MHz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+        <NamedIndividual IRI="#CPU_500MHz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <NamedIndividual IRI="#Gagyi_Konfig"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+        <NamedIndividual IRI="#Gagyi_PC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+        <NamedIndividual IRI="#Munka_Konfig"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+        <NamedIndividual IRI="#Munka_PC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+        <NamedIndividual IRI="#memória_1024MB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+        <NamedIndividual abbreviatedIRI="ont:CPU_2200MHz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+        <NamedIndividual abbreviatedIRI="ont:memória_256MB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+        <NamedIndividual abbreviatedIRI="ont:memória_2GB"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        <NamedIndividual IRI="#Gagyi_Konfig"/>
+        <NamedIndividual IRI="#Gagyi_PC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <NamedIndividual IRI="#Gagyi_PC"/>
+        <NamedIndividual IRI="#CPU_300MHz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <NamedIndividual IRI="#Gagyi_PC"/>
+        <NamedIndividual abbreviatedIRI="ont:memória_256MB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        <NamedIndividual IRI="#Munka_Konfig"/>
+        <NamedIndividual IRI="#Munka_PC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <NamedIndividual IRI="#Munka_PC"/>
+        <NamedIndividual IRI="#memória_1024MB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <NamedIndividual IRI="#Munka_PC"/>
+        <NamedIndividual IRI="#CPU_500MHz"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        <NamedIndividual IRI="#CPU_300MHz"/>
+        <Literal datatypeIRI="&xsd;integer">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        <NamedIndividual IRI="#CPU_500MHz"/>
+        <Literal datatypeIRI="&xsd;integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        <NamedIndividual IRI="#memória_1024MB"/>
+        <Literal datatypeIRI="&xsd;integer">1024</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        <NamedIndividual abbreviatedIRI="ont:CPU_2200MHz"/>
+        <Literal datatypeIRI="&xsd;integer">2200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        <NamedIndividual abbreviatedIRI="ont:memória_256MB"/>
+        <Literal datatypeIRI="&xsd;integer">256</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        <NamedIndividual abbreviatedIRI="ont:memória_2GB"/>
+        <Literal datatypeIRI="&xsd;integer">2048</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="pc_shop:beviteli_eszköze"/>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="pc_shop:része"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="pc_shop:beviteli_eszköze"/>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+        <Class abbreviatedIRI="pc_shop:konfiguráció"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="pc_shop:tételei"/>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="pc_shop:alapgépe"/>
+        <Class abbreviatedIRI="pc_shop:PC"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="pc_shop:alkatrésze"/>
+        <Class abbreviatedIRI="pc_shop:alkatrész"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="pc_shop:beviteli_eszköze"/>
+        <Class abbreviatedIRI="pc_shop:beviteli_eszköz"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="pc_shop:megjelenítője"/>
+        <Class abbreviatedIRI="pc_shop:megjelenítő"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="pc_shop:tételei"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="pc_shop:ellenértéke"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="pc_shop:ellenértéke"/>
+        <Class abbreviatedIRI="pc_shop:áru"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="pc_shop:időpontja"/>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        <Class abbreviatedIRI="pc_shop:memória"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        <Class abbreviatedIRI="pc_shop:processzor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="pc_shop:végösszege"/>
+        <Class abbreviatedIRI="pc_shop:vásárlás"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pc_shop:ellenértéke"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pc_shop:időpontja"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pc_shop:memória_méret_Mb"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pc_shop:processzor_sebesség_MHz"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pc_shop:végösszege"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#ASUS_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ASUS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#ASUS_motherboard</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ASUS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Alienware_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alienware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Azza_case</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Azza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#CoolerMaster_case</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CoolerMaster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#DDR3</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DDR3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Dell_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#External_DataStorage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">External_DataStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Genius_mouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Genius</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Genius_webcam</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Genius</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#HDD_DataStorage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">HDD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#HP_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">HP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Internal_DataStorage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Internal_DataStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Lenovo_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lenovo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Logitech_mouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Logitech</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Logitech_webcam</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Logitech</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Microsoft_keyboard</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Microsoft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Microsoft_mouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Microsoft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#NVIDIA_GPU</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">NVIDIA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Razor_keyboard</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Razor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Razor_mouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Razor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#SSD_DataStorage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SSD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#Toshiba_laptop</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Toshiba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#adattároló</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#case</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">case</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tápegység</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">powersource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#video_card</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">video_card</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <IRI>#webcam</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">webcam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:alapgépe</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Egy konfigurációhoz tartozó PC. A konfiguráció PC-ből, megjelenítőből és beviteli eszközökből áll.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <AbbreviatedIRI>pc_shop:alaplap</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">motherboard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:alkatrésze</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Egy PC alkatrésze.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:beviteli_eszköze</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Egy konfigurációhoz tartozó beviteli eszköz. A konfiguráció PC-ből, megjelenítőből és beviteli eszközökből áll.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:megjelenítője</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Egy konfigurációhoz tartozó megjelenítő. A konfiguráció PC-ből, megjelenítőből és beviteli eszközökből áll.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefLabel"/>
+        <AbbreviatedIRI>pc_shop:memória</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:memória</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hynix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>pc_shop:memória</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RAM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:processzor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AMD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:processzor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Intel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>pc_shop:processzor</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">processor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:része</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reláció, ami a konfigurációk és azok alkotóelemeinek viszonyát fejezi ki. Például egy konfigurációnak része egy PC, aminek további része lehet a memória modul.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>pc_shop:tételei</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Egy vásárláshoz tartozó áruk a vásárlás tételei.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

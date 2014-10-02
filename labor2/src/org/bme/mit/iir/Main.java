@@ -11,10 +11,9 @@ public class Main {
 		
 		Indexer indexer = new Indexer();
 		Searcher searcher = new Searcher();
-		PelletConceptExpander expander = new PelletConceptExpander("data/pc_shop_0.owl", true, false);
+		PelletConceptExpander expander = new PelletConceptExpander("pc_shop_0.owl", true, true);
 		Map<String,Map<String,Integer>> map;
-		//map = indexer.indexFolder("data/IndexTest/");
-		//Map<String,Map<String,Integer>> map = indexer.indexFolder("data/corpus/");
+		//map = indexer.indexFolder("data/corpus/");
 		//indexer.writeToFileAsClearText(map, "indexfile.txt");
 		//indexer.writeToFileSerialized(map, "indexfile.ser");
 		map = indexer.readFromFileSerialized("indexfile.ser");

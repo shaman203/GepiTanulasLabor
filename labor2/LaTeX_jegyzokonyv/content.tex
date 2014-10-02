@@ -1,0 +1,119 @@
+% Hazi Feladat / Meresi jegyzokony sablon BME MIT
+% Keszult: 2012.13.17
+% Leiras: Ebbe a fajlba kerul a lenyegi resz, a szoveg. A legfelsobb szintu felsorolas a section (chapter nem hasznalatos).
+
+\section{A mérés bemutatása}
+A labor során egy kitalált alkalmazási terület dokumentumait kell indexelni, illetve keresni. Az alkalmazási terület a HWSW Informatikai Hírmagazin 2008-2009-es híreinek szövegbázisa. A rendszer alapvető feladata, hogy képes legyen a rövid hírek szövegeiben egyszerű módon keresni.
+
+\section{Feladat 1}
+\subsection{Leírás}
+Tervezzen és valósítson meg egy egyszerű inverz dokumentum előállító programot! A program a paraméterként megadott könyvtárban található szöveges dokumentumokat elemzi, majd egy kimeneti index fájlban eltárolja, hogy melyik szó mely dokumentumokban található meg.
+Egy egyszerű statisztikát kell készíteni. Az inverz dokumentum (avagy dokumentum index) lényege az, hogy ha megadunk egy szót, akkor kikereshető legyen, hogy az mely dokumentumokban szerepelt. Azt is célszerű eltárolni, hogy egy szó hányszor szerepelt egy adott dokumentumban. Az index fájl szerkezete szabadon kialakítható, de feleljen meg a további feladatoknak. Az index kialakításakor ne mátrixos formában tárolja a szó-dokumentum párokat, hanem tömöritve, azaz csak azok a szó-dokumentum párok szerepeljenek, melyek előfordulási gyakorisága nem nulla.
+
+\subsection{Megoldás}
+
+Az inverz dokumentum létrehozzásához a következő adatstruktúrát és osztályt definiáltam:
+\begin{lstlisting}[frame=single,float=!ht]
+
+Map<String,Map<String,Integer>> map;
+
+public class Indexer 
+{
+	private TermRecognizer recog;
+	private int docCount;
+
+
+	public Indexer() throws IOException
+	
+	public Map<String,Map<String,Integer>> indexFolder(String folderName)
+
+	public void indexFilesInFolder(final File folder, Map<String,Map<String,Integer>> map) 
+
+	public void writeToFileAsClearText(Map<String,Map<String,Integer>> map, String filename)
+	
+	public void writeToFileSerialized(Map<String,Map<String,Integer>> map, String filename)
+		
+	public Map<String,Map<String,Integer>> readFromFileSerialized(String filename)
+}
+\end{lstlisting}
+
+A \emph{map} kulcsai a dokumentumokban talált szavak, a kulcsokhoz rendelt érték pedig egy olyan szótár, amiben a kulcs a dokumentum név az érték pedig az adott szó előfordulásának száma a dokumentumban. Ezen adatstruktúra segíti a szavak gyors feldolgozását, előfordulási helyeik gyors visszakeresését. Az \emph{Indexer} osztály végzi az előbbi adatstruktúra feltöltését. Az \emph{indeFolder} metódus rekurzívan bejárja a paraméterül megadott könyvtárat, minden egyes fájlra lefuttattva az indexelő algoritmust. Ez az algoritmus a TermRecognizer megadott segédosztályt felhasználva a beolvasott szöveges fájlt szavakra bontja, számolva azok előfordulását, majd hozzáadja ezt a \emph{map}-hoz. Az \emph{Indexer} osztály emellett képes elmenteni egy fájlba vagy visszaolvasni a szavak indexét.
+
+\section{Feladat 2}
+\subsection{Leírás}
+Készítsen az 1. feladatban készített index fájlra egy kereső programot. A program bemenő paraméterként szavakat kap, eredményként kiírja azon dokumentumok nevét, amelyekben mindegyik szó szerepel.
+
+\subsection{Megoldás}
+A keresést az alábbi osztály valósítja meg:
+\begin{lstlisting}[frame=single,float=!ht]
+public class Searcher {
+
+	public List<String> searchForTerms(List<String> terms,
+			Map<String, Map<String,Integer>> map) 
+}
+\end{lstlisting}
+A \emph{searchForTerms} metódus paraméterként megkapja a keresni kívánt szavakat és az index változót. Az indexből kiszedi hogy az egyes szavak melyik dokumentumokban fordultak elő, majd ezen dokumentum listák metszetét képezi, így megkapjuk azon dokumentumok listáját amelyben mindegyik szó előfordult.
+Futási példa/Használat:
+\begin{lstlisting}[frame=single,float=!ht]
+Indexer indexer = new Indexer();
+Searcher searcher = new Searcher();
+
+Map<String,Map<String,Integer>> map;
+map = indexer.readFromFileSerialized("indexfile.ser");
+
+List<String> terms = new ArrayList<String>();
+terms.add("processzor");
+
+System.out.println(searcher.searchForTerms(terms, map).size());
+\end{lstlisting}
+\begin{lstlisting}[frame=single,float=!ht]
+Output:
+455
+\end{lstlisting}
+A fenti példában az index beolvasása után rákerestünk a \emph{processzor} szóra és a keresőnk 455 cikket talált amiben szerepelt ez a szó. Ha most az \emph{Intel} szót is hozzáadjuk a kereső szók listájához, akkor, mint várható volt lecsökken a talált dokumentumok száma.
+\begin{lstlisting}[frame=single,float=!ht]
+terms.add("processzor");
+terms.add("Intel");
+System.out.println(searcher.searchForTerms(terms, map).size());
+\end{lstlisting}
+\begin{lstlisting}[frame=single,float=!ht]
+Output:
+253
+\end{lstlisting}
+
+\section{Feladat 3}
+\subsection{Leírás}
+Módosítsa a 2. feladatban elkészített kereső programot szemantikus keresőszó kiegészítéssel! A felhasználó által megadott keresőszavakhoz vegyen fel továbbiakat a PC-shop ontológia és egy OWL következtető segítségével. A felvett kulcsszavak lehetnek a felhasználó kulcsszavainak megfelelő osztályok ősei vagy leszármazottai, de más módszert is használhat.
+A keresési eredmények alapján egészítse ki az ontológiát: vegyen fel további kifejezéseket a gyakori keresések eredményének javításához.
+
+\subsection{Megoldás}
+A feladat megoldásához a következőképpen módosítottam a \emph{Searcher} osztály, illetve hoztam létre egy újat, a \emph{PelletConceptExpander} osztályt.
+
+\begin{lstlisting}[frame=single,float=!ht]
+public class Searcher {
+	public List<String> searchForTerms(List<String> terms,
+			Map<String, Map<String,Integer>> map)
+
+	public List<String>  searchForExpandedTerms(
+			List<String> terms, 
+			Map<String, Map<String, Integer>> map, 
+			PelletConceptExpander expander)
+}
+
+public class PelletConceptExpander {
+
+	public PelletConceptExpander(String ontologyFilename, 
+      				boolean inclAnnotations, 
+				boolean inclSubclasses) 	
+
+	public Set<String> expandConcept(String concept)
+	
+	public Set<String> expandConcept(String concept, 
+				boolean inclAnnotations, 
+				boolean inclSubclasses)
+}
+\end{lstlisting}
+
+A \emph{searchForExpandedTerms} metódus annyiban kűlönbözik az előbbi változatától, hogy az egyes keresett szavakhoz hasonló, a \emph{PelletConceptExpander} által visszatérített szavak előfordulását is figyelembe veszi a dokumentumok kiválasztásánál. Egy dokumentum tehát akkor kerül bele a keresés eredményébe, ha minden szó, vagy azok hasonlói előfordultak benne. Például tegyük fel, hogy mi megadtuk az \emph{a, b} szavakat a keresőnek és ezeknek a \emph{PelletConceptExpander} az \emph{a1, a2, a3} illetve \emph{b1, b2} hasonló szavakat téritette vissza. Ekkor egy dokumentum belekerül az eredménybe, ha legalább egy szó az \emph{a, a1, a2, a3} és legalább egy szó a \emph{b, b1, b2, b3} halmazból megtalálható benne.
+
+A \emph{PelletConceptExpander} osztály valósítja a keresést az ontológiában, ami által megkapjuk a szavakhoz kapcsolódó fogalmakat, amiket a keresés bővítésére használunk. Jelenlegi implementáció megengedi hogy ha egy adott szó szerepel az ontológiában osztályként, akkor annak visszatéríti minden alosztályát, minden hozzárendelt címkét vagy minden hozzárendelt címkét, alosztályát és azok címkéit. Ezek az \emph{inclAnnotations,inclSubclasses} flagekkel választhatók ki. Maga az ontológiában történő keresés a \emph{PelletReasoningExample} példaprogram alapján történt. (Megjegyzendő, hogy a reasonernek szüksége volt a JGraphT Java könyvtárra is, hogy működjön, ami nem derült ki fordítás közben.)

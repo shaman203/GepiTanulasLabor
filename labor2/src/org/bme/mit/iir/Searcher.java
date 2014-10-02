@@ -32,6 +32,7 @@ public class Searcher {
 		Set<String> docs = new HashSet<String>();
 		for(String simterm : similarTerms)
 		{
+			if(map.containsKey(simterm))
 			docs.addAll(map.get(simterm).keySet());
 		}
 		
