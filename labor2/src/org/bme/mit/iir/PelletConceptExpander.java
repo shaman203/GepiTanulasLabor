@@ -37,10 +37,14 @@ public class PelletConceptExpander {
 	OWLOntology ontology;
 	OWLReasoner reasoner;
 	OWLDataFactory factory;
+	private boolean inclAnnotations;
+	private boolean inclSubclasses;
 
 
-	public PelletConceptExpander(String ontologyFilename) {
+	public PelletConceptExpander(String ontologyFilename, boolean inclAnnotations, boolean inclSubclasses) {
 
+		this.inclAnnotations = inclAnnotations;
+		this.inclSubclasses = inclSubclasses;
 		manager = OWLManager.createOWLOntologyManager();
 		ontology = null;
 		try {
@@ -108,6 +112,11 @@ public class PelletConceptExpander {
 		return Collections.unmodifiableSet(result);
 	}
 
+	public Set<String> expandConcept(String concept)
+	{
+		return expandConcept(concept, inclAnnotations, inclSubclasses);
+	}
+	
 	public Set<String> expandConcept(String concept, boolean inclAnnotations, boolean inclSubclasses)
 	{
 		Set<String> similarConcepts = new HashSet<String>();

@@ -11,19 +11,20 @@ public class Main {
 		
 		Indexer indexer = new Indexer();
 		Searcher searcher = new Searcher();
-		
-		//Map<String,Map<String,Integer>> map = indexer.indexFolder("data/IndexTest/");
-		Map<String,Map<String,Integer>> map = indexer.indexFolder("data/corpus/");
-		indexer.writeToFileAsClearText(map, "indexfile.txt");
-		indexer.writeToFileSerialized(map, "indexfile.ser");
+		PelletConceptExpander expander = new PelletConceptExpander("data/pc_shop_0.owl", true, false);
+		Map<String,Map<String,Integer>> map;
+		//map = indexer.indexFolder("data/IndexTest/");
+		//Map<String,Map<String,Integer>> map = indexer.indexFolder("data/corpus/");
+		//indexer.writeToFileAsClearText(map, "indexfile.txt");
+		//indexer.writeToFileSerialized(map, "indexfile.ser");
 		map = indexer.readFromFileSerialized("indexfile.ser");
 		//System.out.println("Beolvastam "+map.size());
 		//System.out.println(map.get("Linux"));
 		
 		List<String> terms = new ArrayList<String>();
 		terms.add("processzor");
-		terms.add("Intel");
 		System.out.println(searcher.searchForTerms(terms, map).size());
+		System.out.println(searcher.searchForExpandedTerms(terms, map, expander).size());
 		
 	}
 
