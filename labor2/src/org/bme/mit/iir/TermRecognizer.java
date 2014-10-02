@@ -5,7 +5,7 @@ import java.util.*;
 
 public class TermRecognizer {
 	
-	final static String DEFAULT_STOPWORD_FNAME = "data/stopwords.txt";
+	final static String DEFAULT_STOPWORD_FNAME = "stopwords.txt";
 	final static String DEFAULT_DELIMITERS = " .,;:?!\"()\t\r\n";
 	
 	Set<String> stopwords;

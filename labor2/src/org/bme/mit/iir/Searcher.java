@@ -29,6 +29,8 @@ public class Searcher {
 		Set<String> similarTerms = expander.expandConcept(term);
 		similarTerms.add(term);
 		
+		System.out.println(term+"->"+similarTerms);
+		
 		Set<String> docs = new HashSet<String>();
 		for(String simterm : similarTerms)
 		{

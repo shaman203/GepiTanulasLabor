@@ -1027,12 +1027,12 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RAM</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>pc_shop:processzor</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">AMD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>pc_shop:processzor</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Intel</Literal>
     </AnnotationAssertion>

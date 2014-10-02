@@ -116,4 +116,24 @@ public class PelletConceptExpander {
 
 A \emph{searchForExpandedTerms} metódus annyiban kűlönbözik az előbbi változatától, hogy az egyes keresett szavakhoz hasonló, a \emph{PelletConceptExpander} által visszatérített szavak előfordulását is figyelembe veszi a dokumentumok kiválasztásánál. Egy dokumentum tehát akkor kerül bele a keresés eredményébe, ha minden szó, vagy azok hasonlói előfordultak benne. Például tegyük fel, hogy mi megadtuk az \emph{a, b} szavakat a keresőnek és ezeknek a \emph{PelletConceptExpander} az \emph{a1, a2, a3} illetve \emph{b1, b2} hasonló szavakat téritette vissza. Ekkor egy dokumentum belekerül az eredménybe, ha legalább egy szó az \emph{a, a1, a2, a3} és legalább egy szó a \emph{b, b1, b2, b3} halmazból megtalálható benne.
 
-A \emph{PelletConceptExpander} osztály valósítja a keresést az ontológiában, ami által megkapjuk a szavakhoz kapcsolódó fogalmakat, amiket a keresés bővítésére használunk. Jelenlegi implementáció megengedi hogy ha egy adott szó szerepel az ontológiában osztályként, akkor annak visszatéríti minden alosztályát, minden hozzárendelt címkét vagy minden hozzárendelt címkét, alosztályát és azok címkéit. Ezek az \emph{inclAnnotations,inclSubclasses} flagekkel választhatók ki. Maga az ontológiában történő keresés a \emph{PelletReasoningExample} példaprogram alapján történt. (Megjegyzendő, hogy a reasonernek szüksége volt a JGraphT Java könyvtárra is, hogy működjön, ami nem derült ki fordítás közben.)
+A \emph{PelletConceptExpander} osztály valósítja a keresést az ontológiában, ami által megkapjuk a szavakhoz kapcsolódó fogalmakat, amiket a keresés bővítésére használunk. Jelenlegi implementáció megengedi hogy ha egy adott szó szerepel az ontológiában osztályként, akkor annak visszatéríti minden alosztályát, minden hozzárendelt címkét vagy minden hozzárendelt címkét, alosztályát és azok címkéit. Ezek az \emph{inclAnnotations,inclSubclasses} flagekkel választhatók ki. Maga az ontológiában történő keresés a \emph{PelletReasoningExample} példaprogram alapján történt.
+Futási példa/Használat:
+\begin{lstlisting}[frame=single,float=!ht]
+Indexer indexer = new Indexer();
+Searcher searcher = new Searcher();
+PelletConceptExpander expander = new PelletConceptExpander("pc_shop_0.owl", true,false);
+Map<String,Map<String,Integer>> map;
+map = indexer.readFromFileSerialized("indexfile.ser");
+List<String> terms = new ArrayList<String>();
+terms.add("processzor");
+System.out.println(searcher.searchForTerms(terms, map).size());
+System.out.println(searcher.searchForExpandedTerms(terms, map, expander).size());
+\end{lstlisting}
+\begin{lstlisting}[frame=single,float=!ht]
+Output:
+455
+processzor->[processzor, AMD, processor, Intel]
+1012
+\end{lstlisting}
+
+A fenti futás alatt két keresés hajtódott végre, egy egyszerű keresés és egy hasonló fogalmakkal bővített keresés. Mint látható, a rendszer az OWL ontológiában a processzor-osztályhoz tartozó címkéket is felhasználva több dokumentumot kapott mint az egyszerű keresés esetében.
