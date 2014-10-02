@@ -14,14 +14,16 @@ public class Main {
 		
 		//Map<String,Map<String,Integer>> map = indexer.indexFolder("data/IndexTest/");
 		Map<String,Map<String,Integer>> map = indexer.indexFolder("data/corpus/");
-		indexer.writeToFile(map, "indexfile.txt");
-		
+		indexer.writeToFileAsClearText(map, "indexfile.txt");
+		indexer.writeToFileSerialized(map, "indexfile.ser");
+		map = indexer.readFromFileSerialized("indexfile.ser");
 		//System.out.println("Beolvastam "+map.size());
 		//System.out.println(map.get("Linux"));
 		
 		List<String> terms = new ArrayList<String>();
-		terms.add("Linux");
-		System.out.println(searcher.searchForTerms(terms, map));
+		terms.add("processzor");
+		terms.add("Intel");
+		System.out.println(searcher.searchForTerms(terms, map).size());
 		
 	}
 

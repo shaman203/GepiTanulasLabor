@@ -2,8 +2,12 @@ package org.bme.mit.iir;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,19 +30,21 @@ import java.util.Set;
 public class Indexer 
 {
 	private TermRecognizer recog;
-	
-	
+	private int docCount;
+
+
 	public Indexer() throws IOException
 	{
 		recog = new TermRecognizer();
 	}
-	
+
 	public Map<String,Map<String,Integer>> indexFolder(String folderName)
 	{
 		HashMap<String,Map<String,Integer>> map = new HashMap<String,Map<String,Integer>>();
 		final File folder = new File(folderName);
+		this.docCount = 0;
 		indexFilesInFolder(folder,map);
-
+		System.out.println("Indexed doc count = "+this.docCount);
 		return map;
 	}
 
@@ -49,13 +55,14 @@ public class Indexer
 			} else {
 				indexFile(fileEntry.getPath(),map);
 			}
-		}
+		}	
 	}
 
 	private void indexFile(String docName, Map<String, Map<String,Integer>> map) {
 
 		try {
-			
+			this.docCount++;
+
 			for(String text :  Util.readLinesIntoList(docName))
 			{
 				Map<String,Integer> words = recog.termFrequency(text);
@@ -78,8 +85,8 @@ public class Indexer
 		}
 	}
 
-	
-	public void writeToFile(Map<String,Map<String,Integer>> map, String filename)
+
+	public void writeToFileAsClearText(Map<String,Map<String,Integer>> map, String filename)
 	{
 
 		BufferedWriter writer = null;
@@ -107,9 +114,57 @@ public class Indexer
 			} catch (Exception e) {
 			}
 		}
+	}
+
+	public void writeToFileSerialized(Map<String,Map<String,Integer>> map, String filename)
+	{
+
+		BufferedWriter writer = null;
+		try {
+			//create a temporary file
+			File logFile = new File(filename);
+			writer = new BufferedWriter(new FileWriter(logFile));
+
+			FileOutputStream fileOut =
+					new FileOutputStream(filename);
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			out.writeObject(map);
+			out.close();
+			fileOut.close();
 
 
-
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				// Close the writer regardless of what happens...
+				writer.close();
+			} catch (Exception e) {
+			}
+		}
+	}
+	
+	public Map<String,Map<String,Integer>> readFromFileSerialized(String filename)
+	{
+		Map<String,Map<String,Integer>> map = null;
+		 try
+	      {
+	         FileInputStream fileIn = new FileInputStream(filename);
+	         ObjectInputStream in = new ObjectInputStream(fileIn);
+	         map = (Map<String,Map<String,Integer>>) in.readObject();
+	         in.close();
+	         fileIn.close();
+	         return map;
+	      }catch(IOException i)
+	      {
+	         i.printStackTrace();
+	         return null;
+	      }catch(ClassNotFoundException c)
+	      {
+	         System.out.println("Employee class not found");
+	         c.printStackTrace();
+	         return null;
+	      }
 	}
 }
 
