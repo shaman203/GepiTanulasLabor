@@ -3691,7 +3691,7 @@
 	(compat obj_MSIX48CPlatinumalaplapLGA775DDR3 obj_MSIN260GTXLightningBlackEdition1792MBDDR3PCIExpress)
 	
 	(= (total_cost) 0)
-	(= (remaining_cash) 1)
+	(= (remaining_cash) 120000)
 	(= (total_reliability) 0)
 )
 (:goal 	(and	(in_cart_type ram)
