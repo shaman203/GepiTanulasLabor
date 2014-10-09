@@ -1,0 +1,1 @@
+lpg-td-1.0 -o xdomain.pddl -f xproblem.pddl -out .\xsolution.pddl -quality

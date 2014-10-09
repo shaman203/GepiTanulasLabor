@@ -1,0 +1,11 @@
+Prod
+run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.csv src\msclab01\planning_lab\planner\prod.pddl "2 1 0" "(prod obj_" " " " " ")"
+
+Compat
+run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\compat.csv src\msclab01\planning_lab\planner\compat.pddl "0 1" "(compat obj_" " obj_" ")"
+
+Price
+run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.csv src\msclab01\planning_lab\planner\price.pddl "2 5" "(= (price obj_" ") " ")"
+
+Reliability
+run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.csv src\msclab01\planning_lab\planner\reliability.pddl "2 7" "(=reliability obj_" ") " ")"
