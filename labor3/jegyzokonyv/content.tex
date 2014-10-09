@@ -279,4 +279,25 @@ Amint látható, a tervkészítő sikeresen összeállított egy olyan lépésso
 
 \section{Labor feladat 2}
 \subsection{Leírás}
+Indítsunk el Eclipse-ben egy JADE platform-ot, majd… 
+\begin{itemize}
+\item Frissítsük az 1/c feladatban előállt PDDL leírásnak megfelelően az áruház- és termék-szótárat (illetve szükség szerint esetleg a termékkatalógust is)! 
+\item Írjuk át a PlanExecutorAgent ágens interpretAction metódusát úgy, hogy képes legyen feldolgozni az 1/c feladatban előállt megoldási tervet! 
+\item Futtassuk a PlanExecutorAgent ágenst az 1/c feladatban előállt megoldási tervvel, és foglaljuk össze, hogy mit tapasztaltunk! Mi kellene, hogy történjen elvben, és mi történik valójában? Helyes ez a működés? 
+\item Mi okozhat még problémát elvileg helyes tervek gyakorlati végrehajtása során?
+\end{itemize}
 \subsection{Megoldás}
+A PlanExecutorAgent minimális módosítása után az ágens sikeresen végrehajtotta az előző feladatban elkészített tervet.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[height=7cm]{figures/dump2.png}
+\caption{Az ágens log részlete}
+\end{center}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[height=7cm]{figures/web2.png}
+\caption{A valós akciók eredménye}
+\end{center}
+\end{figure}
+\section{Összefoglalás}

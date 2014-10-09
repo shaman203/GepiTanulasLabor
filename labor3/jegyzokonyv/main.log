@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.24)  7 OCT 2014 00:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.24)  10 OCT 2014 01:08
 entering extended mode
-**E:/Egyetem/2.*Osz*2014_2015/Koop.*es*Gepi*labor/3/jegyzokonyv/main.tex
-("E:/Egyetem/2. Osz 2014_2015/Koop. es Gepi labor/3/jegyzokonyv/main.tex"
+**C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/main.tex
+(C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -289,7 +289,7 @@ Package: babel 2008/07/08 v3.8m The Babel package
 (E:\Programs\MikTex\tex\latex\00miktex\bblopts.cfg
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\magyar.ldf"
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\magyar.ldf
 Language: magyar 2007/10/19 v1.5 Magyar support from the babel v3.7 system
 
 (E:\Programs\MikTex\tex\generic\babel\babel.def
@@ -497,9 +497,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 52.
 
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\main.aux"
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\titlepage.aux")
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\content.aux"))
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\main.aux
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\titlepage.aux)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\content.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
 LaTeX Font Info:    ... okay on input line 86.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
@@ -550,16 +550,16 @@ LaTeX Info: Redefining \ref on input line 86.
 LaTeX Info: Redefining \pageref on input line 86.
 LaTeX Info: Redefining \nameref on input line 86.
 
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\main.out")
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\main.out")
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\main.out)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\main.out)
 \@outlinefile=\write3
 
 (E:\Programs\MikTex\tex\latex\base\article.cls
 LaTeX Info: Redefining \cal on input line 506.
 LaTeX Info: Redefining \mit on input line 507.
 )
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\titlepage.tex"
-<figures/BMElogo.png, id=55, 975.645pt x 273.02pt>
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\titlepage.tex
+<figures/BMElogo.png, id=95, 975.645pt x 273.02pt>
 File: figures/BMElogo.png Graphic file (type png)
  <use figures/BMElogo.png>
 Package pdftex.def Info: figures/BMElogo.png used on input line 8.
@@ -573,12 +573,12 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 
 
 
-{E:/Programs/MikTex/pdftex/config/pdftex.map} <E:/Egyetem/2. Osz 2014_2015/Koop
-. es Gepi labor/3/jegyzokonyv/figures/BMElogo.png>])
+{E:/Programs/MikTex/pdftex/config/pdftex.map} <C:/Users/Csongor/git/GepiTanulas
+Labor/labor3/jegyzokonyv/figures/BMElogo.png>])
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 88.
 
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\main.toc"
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -605,7 +605,7 @@ l.89 \newpage
 
 
 pdfTeX warning: pdflatex.EXE: pop empty color page stack 0
-] ("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\content.tex"
+] (C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\content.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
 
@@ -623,40 +623,132 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
  [2
 
 ]
-Overfull \hbox (274.47266pt too wide) in paragraph at lines 53--56
+Overfull \hbox (274.47266pt too wide) in paragraph at lines 63--66
 \T1/ptm/m/n/10.95 Rendelkezésünkre áll a da-ta.csv ami tar-tal-maz-za a kö-vet-
 ke-z® in-for-má-ci-ó-kat egy ter-mék-r®l: ca-te-gory;prodname;proddesc;prodinfo
 ;prodprice;prodnum;prodreliability;url
  []
 
-) [3] [4]
+[3]
+Overfull \hbox (73.74948pt too wide) in paragraph at lines 84--85
+\T1/ptm/m/n/10.95 Töltse le az Ön web-áruházainak tel-jes kí-ná-la-tát tar-tal-
+ma-zó da-ta.csv ter-mék-ka-ta-ló-gust, majd az msc-lab01.planning_lab.CSVtable
+ []
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 88.
+(E:\Programs\MikTex\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+<figures/web1.png, id=140, 800.9925pt x 375.65344pt>
+File: figures/web1.png Graphic file (type png)
+ <use figures/web1.png>
+Package pdftex.def Info: figures/web1.png used on input line 101.
+(pdftex.def)             Requested size: 424.68289pt x 199.16928pt.
+
+<figures/dump1.png, id=141, 569.87906pt x 220.57407pt>
+File: figures/dump1.png Graphic file (type png)
+ <use figures/dump1.png>
+Package pdftex.def Info: figures/dump1.png used on input line 107.
+(pdftex.def)             Requested size: 514.59944pt x 199.16928pt.
+
+Overfull \hbox (30.90257pt too wide) in paragraph at lines 107--108
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 <C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/figures/web1.p
+ng> <C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/figures/dump1.png
+>] [6]
+Overfull \hbox (140.30948pt too wide) in paragraph at lines 202--203
+[][][][][][][][][] 
+ []
+
+
+Overfull \hbox (5.90811pt too wide) in paragraph at lines 204--205
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (49.10855pt too wide) in paragraph at lines 220--221
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (77.90884pt too wide) in paragraph at lines 222--224
+[][][][][][][][][][][] 
+ []
+
+[7]
+Overfull \hbox (130.70938pt too wide) in paragraph at lines 243--244
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (173.90982pt too wide) in paragraph at lines 266--267
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (97.10904pt too wide) in paragraph at lines 268--269
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (197.91006pt too wide) in paragraph at lines 273--274
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[8] <figures/dump2.png, id=308, 897.3525pt x 450.18187pt>
+File: figures/dump2.png Graphic file (type png)
+
+<use figures/dump2.png>
+Package pdftex.def Info: figures/dump2.png used on input line 293.
+(pdftex.def)             Requested size: 397.01341pt x 199.16928pt.
+ <figures/web2.png, id=309, 779.16093pt x 396.7322pt>
+File: figures/web2.png Graphic file (type png)
+
+<use figures/web2.png>
+Package pdftex.def Info: figures/web2.png used on input line 299.
+(pdftex.def)             Requested size: 391.16075pt x 199.16928pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [9 <C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/figures/dump2.pn
+g>] [10 <C:/Users/Csongor/git/GepiTanulasLabor/labor3/jegyzokonyv/figures/web2.
+png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
-
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\main.aux"
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\titlepage.aux")
-("E:\Egyetem\2. Osz 2014_2015\Koop. es Gepi labor\3\jegyzokonyv\content.aux"))
+ (C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\main.aux
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\titlepage.aux)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor3\jegyzokonyv\content.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C386C7E6E0FFDAA3E6E558C9A6289D7A;1722.
+(rerunfilecheck)             Checksum: DB18849E4459BC82200E14423D1CA1D2;3151.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
- 11351 strings out of 493921
- 162189 string characters out of 3150960
- 235970 words of memory out of 3000000
- 14512 multiletter control sequences out of 15000+200000
- 39294 words of font info for 43 fonts, out of 3000000 for 9000
+ 11829 strings out of 493921
+ 167121 string characters out of 3150960
+ 270972 words of memory out of 3000000
+ 14825 multiletter control sequences out of 15000+200000
+ 41559 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,43p,619b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,12n,43p,843b,1822s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/Programs/MikTex/fonts/enc/dvips/fontname/8r.enc}<E:/Programs/MikTex/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><E:/Programs/MikTex/fonts/type1/urw/times/
-utmb8a.pfb><E:/Programs/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/Programs/Mi
-kTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 76490 bytes).
+/type1/public/amsfonts/cm/cmsy10.pfb><E:/Programs/MikTex/fonts/type1/urw/courie
+r/ucrr8a.pfb><E:/Programs/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/Programs/
+MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/Programs/MikTex/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (11 pages, 269037 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
