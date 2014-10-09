@@ -3690,7 +3690,7 @@
 	(compat obj_ASUSP5QEalaplapLGA775DDR2 obj_MSIN260GTXLightningBlackEdition1792MBDDR3PCIExpress)
 	(compat obj_MSIX48CPlatinumalaplapLGA775DDR3 obj_MSIN260GTXLightningBlackEdition1792MBDDR3PCIExpress)
 	
-	(= (total_cost) 0)
+	(= (total_cost) 1)
 	(= (remaining_cash) 120000)
 	(= (total_reliability) 0)
 )
@@ -3711,6 +3711,6 @@
 			)
 )
 
-(:metric maximize (total_reliability))
+(:metric maximize (/ (total_reliability)  (total_cost)))
 
 )
