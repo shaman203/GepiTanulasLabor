@@ -36,6 +36,6 @@
 			)
 )
 
-(:metric maximize (reliability))
+(:metric maximize (total_reliability))
 
 )
