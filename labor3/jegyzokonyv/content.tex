@@ -1,0 +1,78 @@
+% Hazi Feladat / Meresi jegyzokony sablon BME MIT
+% Keszult: 2012.13.17
+% Leiras: Ebbe a fajlba kerul a lenyegi resz, a szoveg. A legfelsobb szintu felsorolas a section (chapter nem hasznalatos).
+
+\section{A mérés bemutatása}
+
+
+\section{Otthoni feladat 1}
+\subsection{Leírás}
+Az LPG tervkészítő runlpg.bat állományának megfelelő átírásával és futtatásával állítson elő olyan terveket (-speed és -quality opcióval is), melyek megoldják a labor weblapján (http://www.mit.bme.hu/oktatas/targyak/vimim223/feladat/3-Tervkeszites) található PDDL források közül legalább… 
+\begin{itemize}
+\item „Hanoi Tornyai” problémát (3, 5, illetve 7 korong esetén)! 
+\item „Műhold” probléma típusos, és numerikus változatát!
+\end{itemize}
+Hasonlítsa össze, és értelmezze a kapott megoldási terveket (minőség, futási idő, komplexitás szempontjából)!  A kísérletezést a későbbi feladatokkal együtt dokumentálja a labor kapcsán leadandó jegyzőkönyvben (iscreenshot-okkal illusztrálva, igen bő magyarázattal és leírással). 
+\subsection{Megoldás}
+
+\begin{tabular}{ l | c | c | r }
+	PDDL &  Mode &  Time & Quality \\ \hline
+	feladat1(hanoi3) &  -n 1 &  0.03 &  8 \\
+	feladat1(hanoi3) &   -quality &  0.41  &  7 \\
+	feladat1(hanoi3) &   -speed &  0.05 &  63 \\
+	eladat1(hanoi5) &  -n 1 & 19.28  & 31 \\
+	feladat1(hanoi5) &   -quality & 19.22  & 31 \\
+	feladat1(hanoi5) &   -speed &  19.36 &  31\\
+	eladat1(hanoi7) &  -n 1 & 32.97   & 127 \\
+	feladat1(hanoi7) &   -quality &  37.25 &  127\\
+	feladat1(hanoi7) &   -speed & 37.42  & 127 \\
+\end{tabular}
+
+
+\section{Otthoni feladat 2}
+\subsection{Leírás}
+Ismerkedjen meg alaposan a http://project.mit.bme.hu/vimim223/sites/XY elérésen található web-áruházakkal, majd informálisan (de röviden és tömören) foglalja össze a tapasztalatait:
+\begin{itemize}
+\item Milyen web-áruházak vannak? 
+\item Milyen típusú termékeket árulnak? 
+\item Mi jellemzi ezeket a termékeket? 
+\item Milyen cselekvési lehetőségek vannak az egyes web-áruházakon belül és kívül? 
+\item Milyen egyéb (akár gépi úton letölthető/feldolgozható) információk állnak még rendelkezésre? Például milyen CSV fájlok? 
+\end{itemize}
+\subsection{Megoldás}
+\begin{itemize}
+\item a. Milyen web-áruházak vannak? \\
+A nekem rendelt weblapon két webáruház érhető el: vörös nagykereskedés, kék webáruház és zöld webshop. 
+\item b. Milyen típusú termékeket árulnak? \\
+Mindhárom webáruház árul alaplapokat, processzorokat, memóriákat, videokártyákat, merevlemezeket,optikai meghajtókat és monitorokat.
+\item c. Mi jellemzi ezeket a termékeket? \\
+Ezeket a termékeket jellemzi a gyártó, ár, termékleírás.
+\item d. Milyen cselekvési lehetőségek vannak az egyes web-áruházakon belül és kívül? \\
+A webáruházakon kívűl megtekinthetjük a vásárolt terméleket, az új egyenlegünket. Letölthetjük a webshopok adatbázisát csv formátumban, továbbá ráléphetünk a webshopokra.
+A webshopok oldalán kosárba rakhatunk egy terméket, törülhetjük onnan, elküldhetjük a rendelést.
+\item e. Milyen egyéb (akár gépi úton letölthető/feldolgozható) információk állnak még rendelkezésre? Például milyen CSV fájlok? \\
+Rendelkezésünkre áll a data.csv ami tartalmazza a következő információkat egy termékről: category;prodname;proddesc;prodinfo;prodprice;prodnum;prodreliability;url
+Továbbá letölthető egy compat.csv, ami kompatibilis termékpárokat tartalmaz.
+\end{itemize}
+
+\section{Otthoni feladat 3}
+\subsection{Leírás}
+Indítsunk el Eclipse-ben egy JADE platform-ot, majd futtassuk az PlanExecutorAgent ágenst /jade/src/msclab01/planning\_lab/Planner/testplan.SOL paraméterrel. 
+\begin{enumerate}
+\item Mit tapasztalunk? Milyen hibákat dob a rendszer, és miért? Hogyan lehet kijavítani? [Tipp: nézzük meg a /jade/src/msclab01/planning\_lab/csv könyvtárban található data.csv minta-termékkatalógusban, illetve az msclab01.planning\_lab.PlanExecutorAgent.PlanExecutorAgent ágens interpretAction metódusában szereplő URL-eket tüzetesebben!!] 
+\item Pontosan mi történik az interpretAction metódus végrehajtása során (hogyan interpretálja az ágens a bemenő paraméterként megadott terv lépéseit)? 
+\item Futtassa újra az előbbi javítást követően PlanExecutorAgent ágenst, és ellenőrizze az immáron elvileg helyes működést! Megfelelően változott a web-áruházak állapota? Mit történt pontosan?  
+\end{enumerate} 
+\subsection{Megoldás}
+\begin{enumerate}
+\item Szerencsére a PlanExecutorAgent hiba nélkűl lefut.
+\item Az ágens két lépés típust képes végrehajtani: \emph{check-out} és \emph{to-cart}. Mindkét esetben egy url-t térít vissza, ami a konkrét végrehajtandó cselekvést reprezentálja. A \emph{check-out} esetében a csv fájlból kikeresi azt az url ami a lépésben megadott webshophoz tartozik és a rendelés elküldését eredményezi. A \emph{to-cart} lépés feldolgozása abból áll, hogy megkeresi a csv fájban a terméknév alapján azt az url-t ami a terméket hozzáadná a kosárhoz.
+\item Mivel eredetileg helyes volt, másodszori futásra is jól fut, az előző pontban leírtak szerint.
+\end{enumerate} 
+\section{Otthoni feladat 4}
+\subsection{Leírás}
+Töltse le az Ön web-áruházainak teljes kínálatát tartalmazó data.csv termékkatalógust, majd az msclab01.planning\_lab.CSVtable osztály segédlet szerinti felhasználásával (és szükség szerint Microsoft Excel-lel is rásegítve) állítsa elő a letöltött data.csv-nek megfelelő teljes és mintaszerű… a. /jade/src/msclab01/planning\_lab/csv/shopdict.csv és… b. /jade/src/msclab01/planning\_lab/csv/proddict.csv szótárakat! c. Tesztelje az előállt szótárak helyességét a PlanExecutorAgent ágenssel a  3-as feladatban használt testplan.SOL terv megfelelő átírásával! 
+\subsection{Megoldás}
+
+
+
