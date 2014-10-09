@@ -1,0 +1,19 @@
+
+; Version LPG-td-1.0
+; Seed 109859375
+; Command line: lpg-td-1.0 -o msclab01-03-NEPTUN_domain.pddl -f msclab01-03-NEPTUN_problem-001.pddl -out .\msclab01-03-NEPTUN_problem-001_solution -quality 
+; Problem msclab01_tk_problem-001.pddl
+; Actions having STRIPS duration
+; Time 0.02
+; Plan generation time 0.00
+; Search time 0.00
+; Parsing time 0.00
+; Mutex time 0.00
+; Quality 211.90
+
+
+Time 0.02
+
+0:   (ADD_TO_CART OBJ_15TBSAMSUNGHD154UISATAII32MBCACHEWINCHESTERECOGREEN HDD GREEN) [1]
+1:   (CHECK_OUT GREEN) [1]
+2:   (ADD_TO_CART OBJ_1GB800MHZDDR2RAMGEILVALUESPD5 RAM BLUE) [1]

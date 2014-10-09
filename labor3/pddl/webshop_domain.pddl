@@ -7,7 +7,7 @@
 						(in_cart_type ?t - type)
 						(prod ?p - product ?t - type ?s - shop)
 						(compat_in_cart ?t1 - type ?t2 - type)
-						(checked_out ?s)
+						(checked_out ?s - shop)
 	)
 						
 	(:functions
