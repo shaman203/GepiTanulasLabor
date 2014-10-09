@@ -12,3 +12,6 @@ run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.
 
 Reliability
 run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.csv src\msclab01\planning_lab\planner\reliability.pddl "2 7" "(=reliability obj_" ") " ")"
+
+Names
+run.bat msclab01.planning_lab.CSVtable src\msclab01\planning_lab\sajat_csv\data.csv src\msclab01\planning_lab\planner\names.pddl "2" "obj_" " "
