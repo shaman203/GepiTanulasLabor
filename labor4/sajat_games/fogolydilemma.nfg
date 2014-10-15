@@ -1,0 +1,14 @@
+NFG 1 R "FogolyDilemma" { "Player 1" "Player 2" }
+
+{ { "Vall" "Hallgat" }
+{ "Vall" "Hallgat" }
+}
+""
+
+{
+{ "" 2, 6 }
+{ "" 7, 1 }
+{ "" 1, 7 }
+{ "" 6, 6 }
+}
+1 3 2 4 

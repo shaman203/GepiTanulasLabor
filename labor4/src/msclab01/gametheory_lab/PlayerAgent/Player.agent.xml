@@ -1,0 +1,214 @@
+<!--
+	<H3>PlayerAgent</H3>
+-->
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="Player"
+	package="msclab01.gametheory_lab.PlayerAgent">
+
+	<imports>
+		<import>java.util.*</import>
+		<import>java.util.logging.*</import>
+		<import>jade.wrapper.*</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.util.*</import>
+		<import>msclab01.gametheory_lab.*</import>
+	</imports>
+
+	<capabilities>
+		<!-- Include the directory facilitator capability under the name dfcap. -->
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+	</capabilities>
+
+	<beliefs>
+		<!-- This belief stores if the GUI is active. -->
+		<belief name="gui" class="boolean" exported="true">
+			<fact>false</fact>
+		</belief>
+		<!-- This belief will the Game the agent thinks it is playing (when PlayerSetupPlan asserts it here). -->
+		<belief name="G" class="Game" exported="false"/>
+		<!-- This belief stores the ID of the Game the agent thinks it is playing. -->
+		<belief name="gid" class="String" exported="true">
+			<fact>Integer.toString(Game.HAWK_DOVE)</fact>
+		</belief>
+		<!-- This belief stores the type (i.e. the strategy selection mechanism/algorithm/program) ID of the agent. -->
+		<belief name="myType" class="int" exported="true">
+			<fact>PlayerType.RANDOM</fact>
+		</belief>
+		<!-- This belief stores the aggregated utility of the agent. -->
+		<belief name="utility" class="double" exported="true">
+			<fact>0</fact>
+		</belief>
+		<!-- This belief stores the limit for the number of children in a lifetime of an agent. -->
+		<belief name="max_reproduction_num" class="int" exported="true">
+			<fact>0</fact>
+		</belief>
+		<!-- This belief stores the cost (negative utility) of reproduction. -->
+		<belief name="reproduction_cost" class="double" exported="true">
+			<fact>20.0</fact>
+		</belief>
+		<!-- This belief stores the limit for the maximal number of opponent-memories (i.e. action histories in memory).
+			 Should be at least 1 !!! -->
+		<belief name="memlimit" class="int" exported="true">
+			<fact>1000</fact>
+		</belief>
+		<!-- This belief stores the limit for the length of opponent-memories (i.e. their action history).
+			 Should be at least 1 !!! -->
+		<belief name="oppmem_limit" class="int" exported="true">
+			<fact>4</fact>
+		</belief>	
+		<!-- This belief stores the memory of the agent: Vectors are associated to every opponent
+			 the agent has met, with elements of form: (opponent_pid, opponent_sid, opponent_payoff, my_pid, my_sid, my_payoff)
+			 I.e. every opponent we've met has a Vector of String arrays (Sixes) telling us - in
+			 chronological order - for every play we played with him/her the following:
+			 	opponent_pid:		the player/role ID the opponent agent assumed during that play
+			 	opponent_sid:		the strategy ID the opponent agent played during that play
+			 	opponent_payoff:	the payoff we think the opponent got for that
+			 	my_pid:				the player/role ID we assumed during that play
+			 	my_sid:				the strategy ID we played during that play
+			 	my_payoff:			the payoff we've got for that
+			 Nonetheless we don't know whom else (and when) beyond us those opponents met, and what
+			 they were playing (and in what role)... No one is omniscient, except our Designer... ;-) -->
+		<beliefset name="memory" class="Tuple"/>
+		<!-- This belief stores the number of actual children. -->
+		<belief name="children" class="int">
+			<fact>0</fact>
+		</belief>
+		<!-- This belief stores the number of rounds/plays the agent has played. -->
+		<belief name="rounds" class="int">
+			<fact>0</fact>
+		</belief>
+		<!-- This belief stores the GUI of the agent. -->
+		<belief name="myGui" class="PlayerGui"/>
+		<!-- This belief stores the ContainerController wrapping the Container of this
+			 (XML-parametrized jadex.adapter.jade.JadeAgentAdapter extends jade.Agent) agent. -->
+		<belief name="cc" class="AgentContainer">
+			<fact>$agent.getAgentAdapter().getContainerController()</fact> <!-- Call of the jadex.runtime.impl.RBDIAgent.getAgentAdapter().getContainerController() method -->
+		</belief>	
+	</beliefs>
+
+	<goals>
+		<!-- Register to the DF -->
+		<achievegoalref name="df_register">
+			<concrete ref="dfcap.df_register"/>
+		</achievegoalref>
+		<!-- Deregister from the DF -->
+		<achievegoalref name="df_deregister">
+			<concrete ref="dfcap.df_deregister"/>
+		</achievegoalref>
+		<!-- Goal type to keep the number of entries in the memory
+			 below some threshold given by the belief memlimit. -->
+		<maintaingoal name="keep_memlimit" exclude="when_failed">
+			<maintaincondition>
+				$beliefbase.memory.length &lt;= $beliefbase.memlimit
+ 			</maintaincondition>
+		</maintaingoal>
+	</goals>
+
+	<plans>
+		<!-- Passive plan for setting up the beliefs of the agent. -->
+		<plan name="setup">
+			<body class="PlayerSetupPlan"/>
+		</plan>	
+		<!-- Passive plan for taking the agent down. -->
+		<plan name="take_down">
+			<body class="PlayerTakeDownPlan"/>
+		</plan>	
+		<!-- Passive plan for playing the game (thinking and answering)
+		     when a request action message is received. -->
+		<plan name="play">
+			<body class="PlayerPlayPlan"/>
+			<trigger>
+				<messageevent ref="request_action"/>
+			</trigger>
+		</plan>
+		<!-- Passive plan for revising beliefs when a message informing
+			 about reinforcement has arrived. -->
+		<plan name="belief_revision">
+			<body class="PlayerBRFPlan"/>
+			<trigger>
+				<messageevent ref="inform_outcome"/>
+			</trigger>
+		</plan>
+		<!-- Passive plan for removing an opponent memory from the memory.
+ 			 Reacts on the keepmemlimit goal (if the size/length of the memory is greater than zero). -->
+		<plan name="rem_oppmem">
+			<body>new PlayerKeepBSLimitPlan("memory")</body>
+			<trigger>
+				<goal ref="keep_memlimit"/>
+			</trigger>
+			<precondition>$beliefbase.memory.length &gt; 0</precondition>
+		</plan>
+	</plans>
+
+	<events>
+		<!-- Specifies a request for action from the environment (game). -->
+		<messageevent name="request_action" direction="receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+		</messageevent>
+		<!-- The answer message sent after deciding about the strategy to play. -->
+		<messageevent name="inform" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.INFORM</value>
+			</parameter>
+		</messageevent>
+		<!-- Specifies an inform about reinforcement from the environment (game). -->
+		<messageevent name="inform_outcome" direction="receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.INFORM</value>
+			</parameter>
+		</messageevent>
+	</events>
+
+	<expressions>
+		<!-- This query selects the first matching entry from the memory,
+			whereby the parameter $opponent is compared to the first element of
+			a belief set tuple. -->
+		<expression name="query_memory">
+			select one $oppmem
+			from Tuple $oppmem in $beliefbase.memory
+			where $oppmem.get(0).equals($opponent)
+			<parameter name="$opponent" class="String"/>
+		</expression>
+	</expressions>
+
+	<properties>
+		<!-- Only log outputs >= level are printed. -->
+		<property name="logging.level">Level.SEVERE</property>
+		<!-- The default parent handler prints out log messages on the console. -->
+		<property name="logging.useParentHandlers">true</property>
+		<!--<property name="debugging">true</property>-->
+    </properties>
+
+	<configurations>
+		<configuration name="default">
+			<goals>
+				<!-- Initial goal to maintain the size of the memory at all times. -->
+				<initialgoal ref="keep_memlimit"/>
+				<!-- Initial goal to register the agent at startup. -->
+				<initialgoal ref="df_register">
+					<parameter ref="description">
+						<value>
+							<!--  ServiceDescription service = SFipa.createServiceDescription(
+        					"name of service", "type of service", "owner of service",
+					        languages, ontologies, protocols, properties); -->
+ 							SFipa.createAgentDescription(null, SFipa.createServiceDescription(Integer.toString($beliefbase.myType) + " " + Double.toString($beliefbase.utility), "player", "BUTE-DMIS"))
+ 						</value>
+					</parameter>
+				</initialgoal>
+				<!-- End goal to deregister the agent at shutdown. -->
+				<endgoal ref="df_deregister"/>
+			</goals>
+			<plans>
+				<initialplan ref="setup"/>
+				<endplan ref="take_down"/>		
+			</plans>	
+		</configuration>
+	</configurations>
+
+</agent>
+
