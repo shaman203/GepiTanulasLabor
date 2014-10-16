@@ -3,7 +3,7 @@
 % Leiras: Ebbe a fajlba kerul a lenyegi resz, a szoveg. A legfelsobb szintu felsorolas a section (chapter nem hasznalatos).
 
 \section{A mérés bemutatása}
-
+A mérésen játékelméleti problémák leírását, megoldását és szimulációját végeztük. Ehhez a GAMBIT játékleíró/megoldó szoftvert és JADEX es ágenseket használtunk.
 
 \section{Otthoni feladat 1}
 \subsection{Leírás}
@@ -18,50 +18,50 @@ e. totc10.nfg
 \subsection{Megoldás}
 \begin{enumerate}
 \item pd.nfg
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/pd_nfg_dom.png}
 		\caption{A pd.nfg megoldása}
 		\end{center}
 		\end{figure}
-A pd.nfg a fogolydilemma szimmetrikus leírását tartalmazza, mint látható a domináns stratégia a ha egy ágens vall, és a Nash egyensúly az amikor mindketten vallanak.
+A fogolydilemma szimmetrikus leírását tartalmazza, mint látható a domináns stratégia a ha egy ágens vall, és a Nash egyensúly az amikor mindketten vallanak.
 		
 \item hd2v4.0c2.0.nfg
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/hd2v4_dom.png}
 		\caption{A hd2v4.0c2.0.nfg megoldása}
 		\end{center}
 		\end{figure}
-A hd2v4.0c2.0.nfg a galamb-héja probléma egy olyan leírását tartalmazza, amelynek a domináns stratégiája a héja választás, ami egyben a Nash egyensúly is.
+A galamb-héja probléma egy olyan leírását tartalmazza, amelynek a domináns stratégiája a héja választás, ami egyben a Nash egyensúly is.
 		
 \item hd2v2.0c4.0.nfg
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/hd2v2.png}
 		\caption{A hd2v2.0c4.0.nfg megoldása}
 		\end{center}
 		\end{figure}
-A hd2v2.0c4.0.nfg a galamb-héja probléma egy olyan leírását tartalmazza, amelynek nincsen domináns stratégiája, de van 3 Nash egyensúlya.
+A galamb-héja probléma egy olyan leírását tartalmazza, amelynek nincsen domináns stratégiája, de van 3 Nash egyensúlya.
 		
 \item hd3v6.0c3.0.nfg
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
-		\includegraphics[height=7cm]{figures/hd3_dom.png}
+		\includegraphics[height=5cm]{figures/hd3_dom.png}
 		\caption{A hd3v6.0c3.0.nfg megoldása}
 		\end{center}
 		\end{figure}
-A hd3v6.0c3.0.nfgg a galamb-héja probléma 3 játékos változata, amiben a domináns stratégia a héja választás, a Nash egyensúly pedig akkor áll be, ha mindhárom játékos a héját választja.
+A galamb-héja probléma 3 játékos változata, amiben a domináns stratégia a héja választás, a Nash egyensúly pedig akkor áll be, ha mindhárom játékos a héját választja.
 
 \item totc10.nfg
 		no dominance
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/tot.png}
 		\caption{A totc10.nfg megoldása}
 		\end{center}
 		\end{figure}
-A totc10.nfg a közös legelő problémát írja le 10 játékos esetén. Nem rendelkezik domináns stratégiával, sem Nash egyensúlyal.
+A közös legelő problémát írja le 10 játékos esetén. Nem rendelkezik domináns stratégiával, sem Nash egyensúlyal.
 		
 \end{enumerate}
 \section{Otthoni feladat 2}
@@ -72,7 +72,7 @@ A GAMBIT segítségével… a. …építse fel alapvető játékok (Fogolydilemm
 A segédletben leírtak szerint felépítettem a következő problémák normál alakját, és megoldottam őket.
 \begin{itemize}
 \item Fogolydilemma
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/fogoly.png}
 		\caption{A fogolydilemma megoldása}
@@ -81,7 +81,7 @@ A segédletben leírtak szerint felépítettem a következő problémák normál
 Amint láthat a fogolydilemma ezen formájának a domináns stratégiája a vall, és a Nash egyensúlya amikor mindkét fogoly vall. A játék szimmetrikus, ennek értelmében az nfo fájl tartalma:1	1	1 1.
 		
 \item Gyáva nyúl
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/nyul.png}
 		\caption{A gyáva nyúl megoldása}
@@ -90,7 +90,7 @@ Amint láthat a fogolydilemma ezen formájának a domináns stratégiája a vall
 A gyáva nyúl játéknak nincs domináns stratégiája, de van két Nash egyensúlya. A játék szimmetrikus, tehát az nfo fájl tartalma: 1	1	1 1
 		
 \item Nemek harca
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/nemek.png}
 		\caption{A nemek harca megoldása}
@@ -98,7 +98,7 @@ A gyáva nyúl játéknak nincs domináns stratégiája, de van két Nash egyens
 		\end{figure}
 A nemek harcának ezen leírásában, nincs domináns stratégia, van 2 Nash egyensúly és a játék szimmetrikus. Az nfo fálj tehát:1	1	0 0
 \item Vezérürü
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/uru.png}
 		\caption{A vezérürü megoldása}
@@ -107,7 +107,7 @@ A nemek harcának ezen leírásában, nincs domináns stratégia, van 2 Nash egy
 A vezérürü játéknak nincs domináns stratégiájat, van 2 Nash egyensúlya és szimmetrikus. 
 Az nfo fálj tehát:1	1	1 0
 \item Érmepárosítás
-		\begin{figure}[h]
+		\begin{figure}[!h]
 		\begin{center}
 		\includegraphics[height=7cm]{figures/erme.png}
 		\caption{Az érmepárosítás megoldása}
@@ -140,7 +140,8 @@ A jadex ágensek implementációja miatt átirtam a játékleírásokat egy olya
 
 \begin{lstlisting}[caption=Fogolydilemma run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(fogolydilemma 2 2) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(fogolydilemma 2 2) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"fogolydilemma\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"fogolydilemma\\\" gui=true myType=7")
@@ -156,7 +157,8 @@ pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Play
 
 \begin{lstlisting}[caption=Gyáva nyúl run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(gyavanyul 2 2) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(gyavanyul 2 2) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"gyavanyul\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"gyavanyul\\\" gui=true myType=7")
@@ -172,7 +174,8 @@ pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Play
 
 \begin{lstlisting}[caption=Nemek harca run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(nemekharca 2 2) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(nemekharca 2 2) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"nemekharca\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"nemekharca\\\" gui=true myType=7")
@@ -188,7 +191,8 @@ pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Play
 
 \begin{lstlisting}[caption=Vezérürü run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(vezeruru 2 2) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(vezeruru 2 2) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"vezeruru\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"vezeruru\\\" gui=true myType=7")
@@ -204,7 +208,8 @@ pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Play
 
 \begin{lstlisting}[caption=érmepárosítás run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(ermeparositas 2 2) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(ermeparositas 2 2) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"ermeparositas\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"ermeparositas\\\" gui=true myType=7")
@@ -233,7 +238,7 @@ A második feladatot nem sikerült megoldani, mivel az ágens kifutott a memóri
 \end{figure}
 \begin{figure}[h]
 \begin{center}
-\includegraphics[height=7cm]{figures/voting_small2.png}
+\includegraphics[height=5cm]{figures/voting_small2.png}
 \caption{Az egyfordulós szavazás normál alakja}
 \end{center}
 \end{figure}
@@ -246,7 +251,8 @@ Az 1-es feladatban kapott normál alakot adja meg a JADE-es játékvezető (mscl
 Az előbb definiált játékot futtatva a JADEX platformon a következő eredményt kaptam.
 \begin{lstlisting}[caption=Szavazás run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(voting_game 3 3) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(voting_game 3 3) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"voting_game\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"voting_game\\\" gui=true myType=7")
@@ -280,7 +286,8 @@ Komplexebb aukció leírását sajnos most sem sikerült a JADEX platformon futt
 A létrehozott aukció játékot JADEX ágensekkel lejátszva a következő eredményt kaptam. A stratégiák változtatása nem járt különösebb eredményel, hisz a játék csak egy lépéses.
 \begin{lstlisting}[caption=Aukció run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
-ga:msclab01.gametheory_lab.GameAgent.GameAgent(auction_game 3 3) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(auction_game 3 3) 
+pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"auction_game\\\" gui=true myType=7") 
 pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
 "default gid=\\\"auction_game\\\" gui=true myType=7")
