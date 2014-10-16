@@ -333,7 +333,7 @@ public class Game implements Serializable {
 			// READ the generated .SOL solution file for the .NFG game...
 			// ----------------------------------------------------------
 
-			String nfgFilePath	= "E:\\Workspace\\eclipse workspace\\kooplab\\labor4\\sajat_games\\" + game_id + ".nfg";
+			String nfgFilePath	= "C:\\Users\\Csongor\\git\\GepiTanulasLabor\\labor4\\sajat_games\\" + game_id + ".nfg";
 			String problem	= DataHandler.readFile2String(nfgFilePath);
 					
 			String pattern	= "\".[^\\{|\\}]+\"";	// Ezzel ki lehet szedni a jatek, a jatekosok, es a strategiak nevet
@@ -744,7 +744,7 @@ public class Game implements Serializable {
 		
 		Vector<Vector<double[]>> solutions	= new Vector<Vector<double[]>>();
 		
-		String solFilePath	= "E:\\Workspace\\eclipse workspace\\kooplab\\labor4\\sajat_games\\" + game_id + ".sol";
+		String solFilePath	= "C:\\Users\\Csongor\\git\\GepiTanulasLabor\\labor4\\sajat_games\\" + game_id + ".sol";
 
 		try {
 			
@@ -755,7 +755,7 @@ public class Game implements Serializable {
 				// Generate the .SOL solution file for the .NFG game...
 				// ----------------------------------------------------
 				
-				String solveGIDPath	= "E:\\Workspace\\eclipse workspace\\kooplab\\labor4\\gambit\\solve.bat " + game_id;
+				String solveGIDPath	= "C:\\Users\\Csongor\\git\\GepiTanulasLabor\\labor4\\gambit\\solve.bat " + game_id;
 				Process proc		= Runtime.getRuntime().exec(solveGIDPath);
 				proc.waitFor();
 				

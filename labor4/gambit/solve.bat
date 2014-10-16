@@ -1,2 +1,2 @@
 @echo off
-gambit\gambit-simpdiv.exe -q < E:\Workspace\eclipse workspace\kooplab\labor4\sajat_games\%1.nfg > E:\Workspace\eclipse workspace\kooplab\labor4\sajat_games\%1.sol
+gambit\gambit-simpdiv.exe -q < C:\Users\Csongor\git\GepiTanulasLabor\labor4\sajat_games\%1.nfg > C:\Users\Csongor\git\GepiTanulasLabor\labor4\sajat_games\%1.sol

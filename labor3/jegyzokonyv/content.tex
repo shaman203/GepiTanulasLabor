@@ -7,7 +7,7 @@
 
 \section{Otthoni feladat 1}
 \subsection{Leírás}
-Az LPG tervkészítő runlpg.bat állományának megfelelő átírásával és futtatásával állítson elő olyan terveket (-speed és -quality opcióval is), melyek megoldják a labor weblapján (http://www.mit.bme.hu/oktatas/targyak/vimim223/feladat/3-Tervkeszites) található PDDL források közül legalább… 
+Az LPG tervkészítő runlpg.bat állományának megfelelő átírásával és futtatásával állítson elő olyan terveket (-speed és -quality opcióval is), melyek megoldják a labor weblapján található PDDL források közül legalább… 
 \begin{itemize}
 \item „Hanoi Tornyai” problémát (3, 5, illetve 7 korong esetén)! 
 \item „Műhold” probléma típusos, és numerikus változatát!
@@ -15,6 +15,7 @@ Az LPG tervkészítő runlpg.bat állományának megfelelő átírásával és f
 Hasonlítsa össze, és értelmezze a kapott megoldási terveket (minőség, futási idő, komplexitás szempontjából)!  A kísérletezést a későbbi feladatokkal együtt dokumentálja a labor kapcsán leadandó jegyzőkönyvben (iscreenshot-okkal illusztrálva, igen bő magyarázattal és leírással). 
 \subsection{Megoldás}
 
+\begin{center}
 \begin{tabular}{ l | c | c | r }
 	PDDL &  Mode &  Time & Quality \\ \hline
 	hanoi3 &  -n 1 &  0.03 &  8 \\
@@ -33,6 +34,8 @@ Hasonlítsa össze, és értelmezze a kapott megoldási terveket (minőség, fut
 	műhold(numerikus) & -quality & 82.83 & 748.03 \\
 	műhold(numerikus) & -speed & 27.58 & 748.03\\
 \end{tabular}
+\end{center}
+
 A feladat követelményének megfelelően futtattam az LPG tervkészítőt. eredményeimet a fenti táblázatban összefoglalva. Megfigyelhetők a következők:
 \begin{itemize}
 \item A hanoi3 probléma esetében a -quality flag jelentősen megnövelte a futási időt, de sikerült a lépésszámot csökkenteni. Ezzel szemben a -speed flag jelentősen megnövelte a lépésszámot, az általa szolgáltatott terv leginkább egy brute-force megoldásra emlékeztet.
@@ -61,7 +64,7 @@ Ezeket a termékeket jellemzi a gyártó, ár, termékleírás, megbízhatóság
 A webáruházakon kívűl megtekinthetjük a vásárolt terméleket, az új egyenlegünket. Letölthetjük a webshopok adatbázisát csv formátumban, továbbá ráléphetünk a webshopokra.
 A webshopok oldalán kosárba rakhatunk egy terméket, törülhetjük onnan, elküldhetjük a rendelést.
 \item e. Milyen egyéb (akár gépi úton letölthető/feldolgozható) információk állnak még rendelkezésre? Például milyen CSV fájlok? \\
-Rendelkezésünkre áll a data.csv ami tartalmazza a következő információkat egy termékről: category;prodname;proddesc;prodinfo;prodprice;prodnum;prodreliability;url
+Rendelkezésünkre áll a data.csv ami tartalmazza a következő információkat egy termékről: category, prodname, proddesc, prodinfo, prodprice, prodnum, prodreliability, url
 Továbbá letölthető egy compat.csv, ami kompatibilis termékpárokat tartalmaza.
 \end{itemize}
 
@@ -199,9 +202,9 @@ A \emph{check\_out} egyszerűen a rendelés leadást valósítja meg, jelezvén 
 	(:domain webshop)
 	(:objects
 			cpu hdd videocard display mainboard ram dvd - type
-			obj_22SamsungP2270HDLCDmonitorfekete obj_24Samsung2443NWLCDmonitorfekete obj_24LGW2453TQPFLCDmonitorfekete 
+			obj_22SamsungP2270HDLCDmonitorfekete  
 			.....
-			obj_24Samsung2463UWLCDmonitorfekete obj_26ASUSVW266HLCDmonitorfekete - product
+			obj_24Samsung2463UWLCDmonitorfekete  - product
 			green red blue - shop)
 	(:init
 		
@@ -217,9 +220,9 @@ A \emph{check\_out} egyszerűen a rendelés leadást valósítja meg, jelezvén 
 			....
 		(= (price obj_26ASUSVW266HLCDmonitorfekete) 98780)
 		
-		(compat obj_ASRockM3A790GXH128MalaplapAM3DDR3 obj_AMDPhenomIIX2550dobozosSocketAM3BlackEdition)
+		(compat obj_ASRock obj_AMDPhenomIIX2550)
 			....
-		(compat obj_MSIX48CPlatinumalaplapLGA775DDR3 obj_MSIN260GTXLightningBlackEdition1792MBDDR3PCIExpress)
+		(compat obj_MSIX48CPlatinumalaplap obj_MSIN260GTXLightningBlackEdition)
 		
 		(= (total_cost) 1)
 		(= (remaining_cash) 120000)
@@ -263,14 +266,17 @@ Time 21.23
 
 0:   (ADD_TO_CART OBJ_MSIRADEON4830T2D512OC512MBDDR3PCIEXPRESS VIDEOCARD RED) [1]
 1:   (ADD_TO_CART OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 MAINBOARD BLUE) [1]
-2:   (CHECK_COMPATIBILITY OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 OBJ_MSIRADEON4830T2D512OC512MBDDR3PCIEXPRESS MAINBOARD VIDEOCARD BLUE RED) [1]
+2:   (CHECK_COMPATIBILITY OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 
+OBJ_MSIRADEON4830T2D512OC512MBDDR3PCIEXPRESS MAINBOARD VIDEOCARD BLUE RED) [1]
 2:   (ADD_TO_CART OBJ_1GB800MHZDDR2RAMGEILVALUESPD5 RAM BLUE) [1]
-3:   (CHECK_COMPATIBILITY OBJ_1GB800MHZDDR2RAMGEILVALUESPD5 OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 RAM MAINBOARD BLUE BLUE) [1]
+3:   (CHECK_COMPATIBILITY OBJ_1GB800MHZDDR2RAMGEILVALUESPD5 
+OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 RAM MAINBOARD BLUE BLUE) [1]
 3:   (ADD_TO_CART OBJ_22LGW2241SBFLCDMONITORFEKETE DISPLAY BLUE) [1]
 4:   (ADD_TO_CART OBJ_INTELCELERON24GHZDUALCORE1MBDOBOZOSSOCKET775E1600 CPU GREEN) [1]
 4:   (CHECK_OUT BLUE) [1]
 5:   (ADD_TO_CART OBJ_160GBHITACHI7200RPMSATAII8MBCACHEWINCHESTERHDP721016SLA380 HDD GREEN) [1]
-5:   (CHECK_COMPATIBILITY OBJ_INTELCELERON24GHZDUALCORE1MBDOBOZOSSOCKET775E1600 OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 CPU MAINBOARD GREEN BLUE) [1]
+5:   (CHECK_COMPATIBILITY OBJ_INTELCELERON24GHZDUALCORE1MBDOBOZOSSOCKET775E1600 
+OBJ_MSIG31M3LV2ALAPLAPLGA775DDR2 CPU MAINBOARD GREEN BLUE) [1]
 6:   (ADD_TO_CART OBJ_LGDH16NS10RBBBSATADVDOLVASOFEKETEOEM DVD RED) [1]
 6:   (CHECK_OUT GREEN) [1]
 7:   (CHECK_OUT RED) [1]
@@ -301,3 +307,4 @@ A PlanExecutorAgent minimális módosítása után az ágens sikeresen végrehaj
 \end{center}
 \end{figure}
 \section{Összefoglalás}
+A mérés során megismerkedtem a tervkészítés, terv végrehajtás lépéseivel ami meglepően jól működött a valós környezetben. A valós környezet jelen esetben egy webáruház volt, a terv pedig egy vásárlás kivitelezéséből állott, ami bizonyos követelményeknek kellett eleget tegyen. Ez teljes mértékben megvalósítható, automatizálható volt és maga a keresés meglehetősen kevés időbe telt. 

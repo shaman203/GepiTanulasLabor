@@ -7,7 +7,7 @@
 
 \section{Otthoni feladat 1}
 \subsection{Leírás}
-A laborsegédlet és az egyéb segédanyagok maradéktalan elolvasását és megértését követően töltse le a labor weblapjáról (http://www.mit.bme.hu/oktatas/targyak/vimim223/feladat/4-Jatekelmelet) a labor forráskódjait és a GAMBIT (Software Tools for Game Theory) alkalmazást. Bontsa ki a forráskódokat a \\jade\\src\\msclab01 könyvtárba, illetve telepítse a GAMBIT-et. Ezt követően nyissa meg, értelmezze, és oldja meg GAMBIT-tel a \\jade\\src\\msclab01\\gametheory-lab\\games könyvtárban található… 
+A laborsegédlet és az egyéb segédanyagok maradéktalan elolvasását és megértését követően töltse le a labor weblapjáról (http://www.mit.bme.hu/oktatas/targyak/vimim223/feladat/4-Jatekelmelet) a labor forráskódjait és a GAMBIT (Software Tools for Game Theory) alkalmazást. Bontsa ki a forráskódokat a msclab01 könyvtárba, illetve telepítse a GAMBIT-et. Ezt követően nyissa meg, értelmezze, és oldja meg GAMBIT-tel a games könyvtárban található… 
 a. pd.nfg
 b. hd2v4.0c2.0.nfg
 c. hd2v2.0c4.0.nfg
@@ -66,8 +66,7 @@ A totc10.nfg a közös legelő problémát írja le 10 játékos esetén. Nem re
 \end{enumerate}
 \section{Otthoni feladat 2}
 \subsection{Leírás}
-A GAMBIT segítségével… a. …építse fel alapvető játékok (Fogolydilemma, Gyáva nyúl, Nemek harca, Vezérürü, Érmepárosítás, Közlegelők tragédiája, 2-lapos póker, stb) extenzív és/vagy normál alakját majd pedig elemezze az elkészült játékokat (találja meg bennük a domináns stratégiákat, illetve a Nash-egyensúlyokat)! b. Az elkészült játékok normál alakját mentse el a \\jade\\src\\msclab01
-\\gametheory-lab\\games könyvtárba új fájlnevekkel, és egészítse ki őket egy-egy megfelelő .nfo fájllal! Minta gyanánt használhatja a \\jade\\src\\msclab01\\gametheory-lab\\games\\pd.nfo fájlt. Lényegében tehát egy azonos nevű, .nfo kiterjesztésű szövegfájlt (meta-információt) kell létrehoznia minden egyes előbb létrehozott és mentett normál-formájú játék mellé. Ez egy tab-delimited szövegfájl legyen, aminek első eleme (0 vagy 1) adja meg, hogy a kapcsolódó játék szimmetrikus-e, második eleme (0 vagy 1) azt mondja meg, hogy van-e ebben a játékban minden játékosnak ún. kooperatív tiszta stratégiája, és amennyiben ez igaz, úgy harmadik eleme az egyes játékosok kooperatív tiszta stratégia-azonosítóinak (0, 1, 2, …) szóközökkel elválasztott listája, ahol a játékosok sorrendje a kapcsolódó .nfg fájlban megadott sorrendnek feleljen meg.
+A GAMBIT segítségével… a. …építse fel alapvető játékok (Fogolydilemma, Gyáva nyúl, Nemek harca, Vezérürü, Érmepárosítás, Közlegelők tragédiája, 2-lapos póker, stb) extenzív és/vagy normál alakját majd pedig elemezze az elkészült játékokat (találja meg bennük a domináns stratégiákat, illetve a Nash-egyensúlyokat)! b. Az elkészült játékok normál alakját mentse el a games könyvtárba új fájlnevekkel, és egészítse ki őket egy-egy megfelelő .nfo fájllal! Minta gyanánt használhatja a pd.nfo fájlt. Lényegében tehát egy azonos nevű, .nfo kiterjesztésű szövegfájlt (meta-információt) kell létrehoznia minden egyes előbb létrehozott és mentett normál-formájú játék mellé. Ez egy tab-delimited szövegfájl legyen, aminek első eleme (0 vagy 1) adja meg, hogy a kapcsolódó játék szimmetrikus-e, második eleme (0 vagy 1) azt mondja meg, hogy van-e ebben a játékban minden játékosnak ún. kooperatív tiszta stratégiája, és amennyiben ez igaz, úgy harmadik eleme az egyes játékosok kooperatív tiszta stratégia-azonosítóinak (0, 1, 2, …) szóközökkel elválasztott listája, ahol a játékosok sorrendje a kapcsolódó .nfg fájlban megadott sorrendnek feleljen meg.
 
 \subsection{Megoldás}
 A segédletben leírtak szerint felépítettem a következő problémák normál alakját, és megoldottam őket.
@@ -244,6 +243,7 @@ A leírt szavazó játéknak nincs domináns stratégiája és jópár Nash egye
 \subsection{Leírás}
 Az 1-es feladatban kapott normál alakot adja meg a JADE-es játékvezető (msclab01.lab04.GameAgent), és néhány gépi játékos ágens (msclab01.lab04.PlayerAgent) számára, majd végezzen velük kísérleteket! Milyen lejátszások adódnak a játékosok különböző beállításai (pl. stratégia-választó programja) mellett? Elérhető-e, illetve stabil-e a Nash-egyensúly? Mi a legjobb stratégia/program (ha pl. UserAgent ágenssel játszunk adott gépi ágensek, vagy akár más hallgatók által vezérelt UserAgent ágensek ellen)? 
 \subsection{Megoldás}
+Az előbb definiált játékot futtatva a JADEX platformon a következő eredményt kaptam.
 \begin{lstlisting}[caption=Szavazás run config, frame=single,float=!ht]
 -container -port 1099 -host localhost 
 ga:msclab01.gametheory_lab.GameAgent.GameAgent(voting_game 3 3) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
@@ -262,11 +262,36 @@ pa2:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Play
 
 \section{Labor feladat 3}
 \subsection{Leírás}
-Alakítsa ki GAMBIT-ben egy legalább 3 szereplős, legfeljebb néhány lépésből álló egyszerűbb aukció (pl. angol, holland, vagy japán aukció) extenzív alakját, majd konvertálja ezt át normál alakba, elemezze, és mentse a \\jade\\src\\msclab01\\gametheory-lab\\games könyvtárba! Ellenőrizze az elkészült játékot az msclab01.gametheory-lab.Game osztály segítségével is! 
+Alakítsa ki GAMBIT-ben egy legalább 3 szereplős, legfeljebb néhány lépésből álló egyszerűbb aukció (pl. angol, holland, vagy japán aukció) extenzív alakját, majd konvertálja ezt át normál alakba, elemezze, és mentse a games könyvtárba! Ellenőrizze az elkészült játékot az msclab01.gametheory-lab.Game osztály segítségével is! 
 \subsection{Megoldás}
+A létrehozott aukció játéknak 3 játékosa lehet, egy termékre licitálnak és 2 pénzel rendelkeznek. A termék valós értéke 4, tehát ha egy játékos megveszi 1 ért, akkor a haszna 3.
+Komplexebb aukció leírását sajnos most sem sikerült a JADEX platformon futtatni.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[height=7cm]{figures/auction.png}
+\caption{Az aukció játék extenzív alakja}
+\end{center}
+\end{figure}
 
 
 \section{Labor feladat 4}
 \subsection{Leírás}A 3-as feladatban kapott normál alakot adja meg egy JADE-es GameAgent játékvezető és néhány Player gépi játékos ágens számára, majd végezzen velük kísérleteket! Milyen lejátszások adódnak a játékosok különböző beállításai (pl. stratégia-választó programja) mellett? Elérhető-e, illetve stabil-e a Nash-egyensúly? Mi a legjobb stratégia/program (ha pl. UserAgent ágenssel játszunk adott gépi ágensek, vagy akár más hallgatók által vezérelt UserAgent ágensek ellen)?   
 \subsection{Megoldás}
+A létrehozott aukció játékot JADEX ágensekkel lejátszva a következő eredményt kaptam. A stratégiák változtatása nem járt különösebb eredményel, hisz a játék csak egy lépéses.
+\begin{lstlisting}[caption=Aukció run config, frame=single,float=!ht]
+-container -port 1099 -host localhost 
+ga:msclab01.gametheory_lab.GameAgent.GameAgent(auction_game 3 3) pa0:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+"default gid=\\\"auction_game\\\" gui=true myType=7") 
+pa1:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+"default gid=\\\"auction_game\\\" gui=true myType=7")
+pa2:jadex.adapter.jade.JadeAgentAdapter(msclab01.gametheory_lab.PlayerAgent.Player 
+"default gid=\\\"auction_game\\\" gui=true myType=7")
+\end{lstlisting}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height=7cm]{figures/auction_jadex.png}
+\caption{Ágens aukció játékeredmény}
+\end{center}
+\end{figure}
 \section{Összefoglalás}
+A labor során megismerkedtem a játékok GAMBIT-al való leírásával, megoldásával. Ez követően szimulációkat végeztem JADEX ágensekkel, akik lejátszották az adott játékokat. Tapasztaltam hogy a játékok világában a leírás exponenciálisan nő a játékosok, lehetséges lépések számával. Kis lépésszám melett a GAMBIT alkalmas volt a játék modellezésére, de nagy lépésszámnál a Nash egyensúly számolás és domináns stratégia keresés már sikertelen volt.
