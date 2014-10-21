@@ -41,7 +41,7 @@ import msclab01.votingauction_lab.DataHandler;
  * @author Dániel László, Kovács (dkovacs@mit.bme.hu)
  *
  */
-public class AuctioneerAgent extends Agent implements IAuctioneerAgent {
+public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 	
 	private static final long serialVersionUID = 1733399087955765502L;
 	
@@ -71,7 +71,10 @@ public class AuctioneerAgent extends Agent implements IAuctioneerAgent {
 	/** The total amount of goods to sell at the actual auction (default value is 0) */
 	private int totalGoodNumber = 0;
 	//-------------------------- Things that may change during the auction --------------------------
-	/** The actual cash of different bidders */
+	
+	//The agents still in the active auction
+	private List<AID> agentsInRoom;
+	/** The actual cash of different bidders */	
 	private HashMap<AID, Integer> bidderMoney;
 	/** The actual utility of different bidders */
 	private HashMap<AID, Double> bidderUtility;
@@ -83,8 +86,12 @@ public class AuctioneerAgent extends Agent implements IAuctioneerAgent {
 	private int goodCounter = 1;
 	/** The Agent-IDentifier (AID) of the actual leader of the auction (init value is NULL)*/
 	private AID leaderAID = null;
+	/** The Agent-IDentifier (AID) of the current dropout of the auction (init value is NULL)*/
+	private AID dropoutAID = null;
+	
 	/** The name (Agent.getAID().getName() or Agent.getLocalName()) of the actual leader of the auction (init value is an empty String)*/
 	private String leaderName = "";
+	private String dropoutName = "";
 	/** The actual type of the good that is being offered for sale (init value is an empty String)*/
 	private String goodType = "";
 	/** The actual bid for the good being offered  (init value is 0)*/
@@ -516,6 +523,8 @@ public void callBehaviour(String b) {
 		      		// Fix an initial price for the good of previously chosen type...
 		      		bid	= goodPrice.get(goodType).intValue();
 
+		      		//Add all agents to the room
+		      		agentsInRoom.addAll(bidderAgents);
 		      		// Start executing the auction...
 		      		awBehaviour = new AnnounceAndWait();
 		      		myAgent.addBehaviour(awBehaviour);
@@ -574,24 +583,12 @@ public void callBehaviour(String b) {
 		  switch (state) {
 
 			  case 0: // Send an appropriate announcement...
-	
-				  // If the actual good is announced for the 1st time, then...
-				  if (leaderName.isEmpty()) {
-					  
 					  msgContent =	goodCounter + " "
 					  				+ goodType + " "
 					  				+ bid + " "
 					  				+ round;
 
-				  } else {
-					  
-					  msgContent =	goodCounter + " "
-					  				+ goodType + " "
-					  				+ bid + " "
-					  				+ round + " "
-					  				+ leaderName;
-					  
-				  }
+				
 				  
 				  // Create the appropriate broadcast message to the bidders...
 				  ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
@@ -627,9 +624,9 @@ public void callBehaviour(String b) {
 				  
 				  break;
 
-			  case 1: // Wait for proposals...
+			  case 1: // Wait for dropout
 
-				  mt = MessageTemplate.MatchPerformative(ACLMessage.PROPOSE);
+				  mt = MessageTemplate.MatchPerformative(ACLMessage.REJECT_PROPOSAL);
 	
 				  // Receive an appropriate message from a Bidder...
 				  msg = myAgent.receive(mt);
@@ -638,51 +635,25 @@ public void callBehaviour(String b) {
 				  if (msg != null) {
 					  
 					  try {
-					  
-						  // A default pessimistic supposition...
-						  int proposal = 0;
-						  
-						  // Try to parse the content of the received proposal-message...
-						  try {
-							  
-							  // The proposal of the bidder agent...
-							  proposal = Integer.parseInt(msg.getContent());
-							  
-						  } catch (NumberFormatException nfe) {}
-						  
-						  // If a known bidder is interacting with us appropriately, then...
-						  if (bidderMoney.containsKey(msg.getSender()) && proposal > 0) {
-						  
-							  // If this is a really legitimate proposal, then...
-							  // Comment: if the same agent makes a following, higher bid, it is accepted... ;-)
-							  if (proposal > bid && bidderMoney.get(msg.getSender()).intValue() >= proposal) {
-			
 								  // Update the appropriate parameters of the current good-auction
 								  // considering the imminent announcement/broadcast...
-								  leaderAID		= msg.getSender();
-								  leaderName 	= leaderAID.getLocalName();
-								  bid			= proposal;
-								  round			= 1;
-	
+								  dropoutAID		= msg.getSender();
+								  dropoutName 	= dropoutAID.getLocalName();
+								  if(agentsInRoom.contains(dropoutAID))
+								  {
+									  agentsInRoom.remove(dropoutAID);
+								  }
+								  	
 								  // Update the TextArea on the GUI appropriately...
-								  eventDescString	= "PROPOSAL\t" + leaderName + " " + bid;
+								  eventDescString	= "DROPOUT\t" + dropoutName;
 								  currentTimeString = "[" + new SimpleDateFormat("HH:mm:ss:SSS").format(new Date()) + "]\t";
 								  myGui.appendText(currentTimeString + eventDescString + "\n");
-								  
-								  // On the next scheduling of this behaviour (by the JADE runtime) we shall execute
-								  // the action() method so as to realize the state of this behaviour where the announcement
-								  // of the new leader (concerning the announced good) takes place...
-								  state = 0;
-								  
+								  								  
 								  // Remove the TimeoutHandler behaviour from the queue (to ensure that we'll be able to
 								  // directly execute state 0 of this awBehaviour next so as to announce the new
 								  // highest bid/bidder)... The removal (not reset!) here also ensures, that we'll have
 								  // only one TimeoutHandler behaviour instance in the active-queue simultaneously...
 								  myAgent.removeBehaviour(thBehaviour);
-								  
-							  }
-							  
-						  }
 					  
 					  } catch (Exception e) {
 						  
@@ -721,6 +692,7 @@ public void callBehaviour(String b) {
 
 				  // Add all the bidders as receivers...
 				  Iterator<AID> bai = bidderAgents.iterator();
+
 				  while(bai.hasNext()) msg.addReceiver(bai.next());
 
 				  // Send the STOP-AUCTION broadcast message to the bidders...
@@ -745,6 +717,8 @@ public void callBehaviour(String b) {
 		  return (state == 2);
 
 	  } // End of AuctioneerAgent.AnnounceAndWait.done() method
+
+	
 	  
 	}  // End of AuctioneerAgent.AnnounceAndWait behavour
 	
@@ -780,7 +754,7 @@ public void callBehaviour(String b) {
 			if (round == 3) {
 
 				// If that last round has ended without any relevant proposals, then (there is no winner)...
-				if (leaderName.isEmpty()) {
+				if (agentsInRoom.size() == 0) {
 
 					// Update the TextArea on the GUI appropriately...
 					String eventDescString		= "NOT SOLD\t" + goodCounter + " " + goodType + " " + bid;
@@ -835,6 +809,7 @@ public void callBehaviour(String b) {
 			      		// Fix an initial price for that good (of the chosen type)...
 						bid	= goodPrice.get(goodType).intValue();
 
+						
 						// Reset the state of the AnnounceAndWait behaviour instance (indirectly) to
 			      		// zero, i.e. "announce", now...
 						awBehaviour.setState(0);
@@ -842,9 +817,11 @@ public void callBehaviour(String b) {
 					}
 
 				// ...else there is a winner for the given good.
-				} else {
+				} else if(agentsInRoom.size() == 1){
 
 					// Update the TextArea on the GUI appropriately...
+					leaderAID = agentsInRoom.get(0);
+					leaderName = leaderAID.getLocalName();
 					String eventDescString		= "SOLD TO\t" + leaderName + " " + goodCounter + " " + goodType + " " + bid;
 					String currentTimeString	= "[" + new SimpleDateFormat("HH:mm:ss:SSS").format(new Date()) + "]\t";
 					myGui.appendText(currentTimeString + eventDescString + "\n");
@@ -919,11 +896,19 @@ public void callBehaviour(String b) {
 			      		// Fix an initial price for that good (of the chosen type)...
 						bid	= goodPrice.get(goodType).intValue();
 
+						//Add all agents to the room
+			      		agentsInRoom.addAll(bidderAgents);
+						
 						// Reset the state of the AnnounceAndWait behaviour instance (indirectly) to
 			      		// zero, i.e. "announce", now...
 						awBehaviour.setState(0);
 
 					}
+					
+				}
+				//ha több mint 1 ágens maradt a szobában
+				else 
+				{
 					
 				}
 

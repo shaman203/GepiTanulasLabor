@@ -31,7 +31,7 @@ class AuctioneerAgentGui extends JFrame {
 
 	private static final long serialVersionUID = 2233952985897694884L;
 
-	private AuctioneerAgent myAgent;
+	private IAuctioneerAgent myAgent;
 
 	public JProgressBar progressBar;
 	public JTextField goodNo, goodType, initBidAmount, bidAmount, leaderName, leaderMoney, leaderBuys, leaderUtility;
@@ -39,7 +39,7 @@ class AuctioneerAgentGui extends JFrame {
 	public JButton startButton;
 	public JButton stopButton;
 
-	AuctioneerAgentGui(AuctioneerAgent a) {
+	AuctioneerAgentGui(IAuctioneerAgent a) {
 
 		super("AuctioneerAgent " + a.getLocalName());
 
@@ -53,7 +53,7 @@ class AuctioneerAgentGui extends JFrame {
 		JPanel p1 = new JPanel();
 		p1.setLayout(new GridLayout(1, 1));
 
-        progressBar = new JProgressBar(0, myAgent.totalGoodNumber);
+        progressBar = new JProgressBar(0, myAgent.getTotalGoodNumber());
         progressBar.setValue(0);
         progressBar.setStringPainted(true);
 
