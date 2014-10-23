@@ -19,6 +19,7 @@ package msclab01.votingauction_lab.BidderAgent;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Random;
 
 import jade.core.Agent;
 import jade.core.behaviours.*;
@@ -184,8 +185,6 @@ public class JapBidderAgent extends Agent {
 		private String goodType = "";
 		/** The latest known bid for the offered good (init value is 0)*/
 		private int bid = 0;
-		/** The latest known round about the offered good (init value is 0)*/
-		private int round = 0;
 		/** A template to receive messages*/
 		private MessageTemplate mt;
 		/** The state of this behaviour (init value is 0)*/
@@ -241,27 +240,6 @@ public class JapBidderAgent extends Agent {
 					// If the auction is over, then...
 					if (msg.getContent().equals("stop")) {
 
-						// If I was leading the auction concerning the latest good, then...
-						if (myAgent.getLocalName().equals(leaderName)) {
-
-							// Decrease the amount of my money...
-							myMoney -= bid;
-							//System.out.println(getLocalName() + " - My money: " + myMoney);
-
-							// Increase my utility...
-							myUtility += (goodPrice.get(goodType).doubleValue() + 1) / bid;
-							//System.out.println(getLocalName() + " - My uility: " + myUtility);
-
-							// Increment the number of goods I bought...
-							myBuys++;
-							//System.out.println(getLocalName() + " - My buys: " + myBuys);
-
-						}
-
-						// Decrease the number of available goods of the given/sold type by 1...
-						goodNumber.put(goodType, new Integer(goodNumber.get(goodType).intValue()-1));
-						//System.out.println(getLocalName() + " - Good type: " + goodType + " Good number: " + goodNumber.get(goodType).intValue());
-
 						step = 2;
 
 						// ...else this is about the auction of a given good.	
@@ -291,7 +269,7 @@ public class JapBidderAgent extends Agent {
 							int actualGoodCounter	= Integer.parseInt(msgTokens[0]);
 							String actualGoodType	= msgTokens[1];
 							int actualBid			= Integer.parseInt(msgTokens[2]);
-							int actualRound			= Integer.parseInt(msgTokens[3]);
+
 
 							//System.out.println(myAgent.getLocalName() + " - Previous leader name: " + leaderName);
 							//System.out.println(myAgent.getLocalName() + " - Actual leader name: " + actualLeaderName);
@@ -305,10 +283,10 @@ public class JapBidderAgent extends Agent {
 							goodCounter	= actualGoodCounter;
 							goodType		= actualGoodType;
 							bid			= actualBid;
-							round			= actualRound;
 
 							// Primitive, very greedy bidding strategy...
-							if (myMoney < actualBid) {
+							Random rand = new Random();
+							if (myMoney < actualBid + rand.nextInt(3)) {
 
 								ACLMessage reply = msg.createReply();
 								reply.setPerformative(ACLMessage.REJECT_PROPOSAL);

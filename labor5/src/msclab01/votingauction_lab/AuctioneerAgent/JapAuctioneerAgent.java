@@ -97,8 +97,7 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 	private String goodType = "";
 	/** The actual bid for the good being offered  (init value is 0)*/
 	private int bid = 0;
-	/** The actual round about the offered good (init value is 1)*/
-	private int round = 1;
+
 
 	/** Put agent initializations here*/
 	protected void setup() {
@@ -464,7 +463,8 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 				bidderMoney		= new HashMap<AID, Integer>(result.length);
 				bidderUtility	= new HashMap<AID, Double>(result.length);
 				bidderBuys		= new HashMap<AID, Integer>(result.length);
-
+				agentsInRoom = new ArrayList<AID>();
+				
 				ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 				msg.setContent("start");
 
@@ -586,8 +586,7 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 			case 0: // Send an appropriate announcement...
 				msgContent =	goodCounter + " "
 						+ goodType + " "
-						+ bid + " "
-						+ round;
+						+ bid;
 				/*  if(agentsInRoom.size() == 1)
 					  {
 						  leaderAID = agentsInRoom.get(0);
@@ -659,7 +658,7 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 						// directly execute state 0 of this awBehaviour next so as to announce the new
 						// highest bid/bidder)... The removal (not reset!) here also ensures, that we'll have
 						// only one TimeoutHandler behaviour instance in the active-queue simultaneously...
-						myAgent.removeBehaviour(thBehaviour);
+						//myAgent.removeBehaviour(thBehaviour);
 
 					} catch (Exception e) {
 
@@ -756,9 +755,6 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 
 		protected void onWake() {
 
-			// If the last round has ended concerning the given good, then (its fate is decided)...
-			if (round == 3) {
-
 				// If that last round has ended without any relevant proposals, then (there is no winner)...
 				if (agentsInRoom.size() == 0) {
 
@@ -805,9 +801,6 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 
 						// Let's move on to the next good...
 						goodCounter++;
-
-						// Let's start (again) from the beginning (with that next/new good)...
-						round = 1;
 
 						// Let's choose its type (randomly from the remaining good-types)...
 						goodType = (String)goodNumber.keySet().toArray()[r.nextInt(goodNumber.keySet().size())];
@@ -899,9 +892,6 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 						// Let's move on to the next good...
 						goodCounter++;
 
-						// Let's start (again) from the beginning (with that next/new good)...
-						round = 1;
-
 						// Let's choose its type (randomly from the remaining good-types)...
 						goodType = (String)goodNumber.keySet().toArray()[r.nextInt(goodNumber.keySet().size())];
 
@@ -923,29 +913,21 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 				//ha több mint 1 ágens maradt a szobában
 				else 
 				{
-					bid++;
-					//megvizsgáljuk h biztos van elegendő pénzük a bentmaradó ágenseknek
-					for(Entry<AID,Integer> entry : bidderMoney.entrySet())
+					/*for(Entry<AID,Integer> entry : bidderMoney.entrySet())
 					{
 						if(agentsInRoom.contains(entry.getKey()) && bid > entry.getValue())
 						{
 							agentsInRoom.remove(entry.getKey());
 						}
-					}
+					}*/
+					bid++;
+					//megvizsgáljuk h biztos van elegendő pénzük a bentmaradó ágenseknek
+					
 					awBehaviour.setState(0);
 				}
 
 				// ...else this is not the last round concerning the given good.
-			} else {
-
-				// Let's go to the next round (i.e. drop of auctioneer's hammer)...
-				round++;
-
-				// Reset the state of the AnnounceAndWait behaviour instance (indirectly) to
-				// zero, i.e. "announce", now...
-				awBehaviour.setState(0);
-
-			}
+		
 
 			// If the auction is over (i.e. we tried to sell all the goods), then...
 			if (auctionIsOver) {
