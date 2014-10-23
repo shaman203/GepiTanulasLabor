@@ -190,6 +190,8 @@ public class JapBidderAgent extends Agent {
 		/** The state of this behaviour (init value is 0)*/
 		private int step = 0;
 
+		boolean inAuction = true;
+		
 		public void action() {
 
 			switch (step) {
@@ -280,17 +282,23 @@ public class JapBidderAgent extends Agent {
 							//System.out.println(myAgent.getLocalName() + " - Previous round: " + round);
 							//System.out.println(myAgent.getLocalName() + " - Actual round: " + actualRound);
 
+							
+							if(actualGoodCounter != goodCounter)
+							{
+								inAuction = true;
+							}
 							goodCounter	= actualGoodCounter;
 							goodType		= actualGoodType;
 							bid			= actualBid;
 
 							// Primitive, very greedy bidding strategy...
 							Random rand = new Random();
-							if (myMoney < actualBid + rand.nextInt(3)) {
+							if (inAuction && (myMoney < actualBid + rand.nextInt(3))) {
 
 								ACLMessage reply = msg.createReply();
 								reply.setPerformative(ACLMessage.REJECT_PROPOSAL);
 								send(reply);
+								inAuction = false;
 
 							}
 
