@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.24)  16 OCT 2014 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.24)  24 OCT 2014 23:17
 entering extended mode
-**C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/main.tex
-(C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/main.tex
+**C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/main.tex
+(C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -289,7 +289,7 @@ Package: babel 2008/07/08 v3.8m The Babel package
 (E:\Programs\MikTex\tex\latex\00miktex\bblopts.cfg
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\magyar.ldf
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\magyar.ldf
 Language: magyar 2007/10/19 v1.5 Magyar support from the babel v3.7 system
 
 (E:\Programs\MikTex\tex\generic\babel\babel.def
@@ -497,9 +497,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 52.
 
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\main.aux
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\titlepage.aux)
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\content.aux))
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\main.aux
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\titlepage.aux)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\content.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
 LaTeX Font Info:    ... okay on input line 86.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
@@ -550,16 +550,16 @@ LaTeX Info: Redefining \ref on input line 86.
 LaTeX Info: Redefining \pageref on input line 86.
 LaTeX Info: Redefining \nameref on input line 86.
 
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\main.out)
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\main.out)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\main.out)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\main.out)
 \@outlinefile=\write3
 
 (E:\Programs\MikTex\tex\latex\base\article.cls
 LaTeX Info: Redefining \cal on input line 506.
 LaTeX Info: Redefining \mit on input line 507.
 )
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\titlepage.tex
-<figures/BMElogo.png, id=107, 975.645pt x 273.02pt>
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\titlepage.tex
+<figures/BMElogo.png, id=119, 975.645pt x 273.02pt>
 File: figures/BMElogo.png Graphic file (type png)
  <use figures/BMElogo.png>
 Package pdftex.def Info: figures/BMElogo.png used on input line 8.
@@ -574,11 +574,11 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 
 
 {E:/Programs/MikTex/pdftex/config/pdftex.map} <C:/Users/Csongor/git/GepiTanulas
-Labor/labor4/jegyzokonyv/figures/BMElogo.png>])
+Labor/labor5/jegyzokonyv/figures/BMElogo.png>])
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 88.
 
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\main.toc
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -605,272 +605,162 @@ l.89 \newpage
 
 
 pdfTeX warning: pdflatex.EXE: pop empty color page stack 0
-] (C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\content.tex
+] (C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\content.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 31.
 
-<figures/pd_nfg_dom.png, id=145, 590.205pt x 249.93375pt>
-File: figures/pd_nfg_dom.png Graphic file (type png)
+(E:\Programs\MikTex\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (322.71133pt too wide) in paragraph at lines 36--37
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
-<use figures/pd_nfg_dom.png>
-Package pdftex.def Info: figures/pd_nfg_dom.png used on input line 23.
-(pdftex.def)             Requested size: 470.34546pt x 199.16928pt.
+<figures/ofel1a1.png, id=160, 464.4853pt x 516.42938pt>
+File: figures/ofel1a1.png Graphic file (type png)
 
-<figures/hd2v4_dom.png, id=146, 459.21562pt x 219.82124pt>
-File: figures/hd2v4_dom.png Graphic file (type png)
+<use figures/ofel1a1.png>
+Package pdftex.def Info: figures/ofel1a1.png used on input line 40.
+(pdftex.def)             Requested size: 179.1357pt x 199.16928pt.
+ <figures/ofel1a2.png, id=161, 385.44pt x 457.71pt>
+File: figures/ofel1a2.png Graphic file (type png)
 
-<use figures/hd2v4_dom.png>
-Package pdftex.def Info: figures/hd2v4_dom.png used on input line 32.
-(pdftex.def)             Requested size: 416.08604pt x 199.16928pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/hd2v2.png, id=147, 459.96844pt x 248.42813pt>
-File: figures/hd2v2.png Graphic file (type png)
- <use figures/hd2v2.png>
-Package pdftex.def Info: figures/hd2v2.png used on input line 41.
-(pdftex.def)             Requested size: 368.76834pt x 199.16928pt.
+<use figures/ofel1a2.png>
+Package pdftex.def Info: figures/ofel1a2.png used on input line 46.
+(pdftex.def)             Requested size: 167.71797pt x 199.16928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/hd3_dom.png, id=148, 638.385pt x 218.31563pt>
-File: figures/hd3_dom.png Graphic file (type png)
-
-<use figures/hd3_dom.png>
-Package pdftex.def Info: figures/hd3_dom.png used on input line 50.
-(pdftex.def)             Requested size: 415.99734pt x 142.26378pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/tot.png, id=149, 439.6425pt x 286.82156pt>
-File: figures/tot.png Graphic file (type png)
- <use figures/tot.png>
-Package pdftex.def Info: figures/tot.png used on input line 60.
-(pdftex.def)             Requested size: 305.29237pt x 199.16928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2
 
- <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/pd_nfg_dom.p
-ng>] [3 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/hd2v4
-_dom.png> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/hd2
-v2.png> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/hd3_d
-om.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 74.
- (E:\Programs\MikTex\tex\latex\psnfss\omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+] [3 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel1a1.
+png> <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel1a2.
+png>] <figures/ofel2.png, id=201, 461.47406pt x 513.41812pt>
+File: figures/ofel2.png Graphic file (type png)
 
-<figures/fogoly.png, id=167, 459.96844pt x 219.82124pt>
-File: figures/fogoly.png Graphic file (type png)
+<use figures/ofel2.png>
+Package pdftex.def Info: figures/ofel2.png used on input line 81.
+(pdftex.def)             Requested size: 179.0165pt x 199.16928pt.
 
-<use figures/fogoly.png>
-Package pdftex.def Info: figures/fogoly.png used on input line 77.
-(pdftex.def)             Requested size: 416.76817pt x 199.16928pt.
+<figures/ofel3_1.png, id=202, 451.6875pt x 237.13594pt>
+File: figures/ofel3_1.png Graphic file (type png)
+
+<use figures/ofel3_1.png>
+Package pdftex.def Info: figures/ofel3_1.png used on input line 102.
+(pdftex.def)             Requested size: 379.38045pt x 199.16928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/nyul.png, id=168, 459.21562pt x 252.19218pt>
-File: figures/nyul.png Graphic file (type png)
- <use figures/nyul.png>
-Package pdftex.def Info: figures/nyul.png used on input line 86.
-(pdftex.def)             Requested size: 362.67125pt x 199.16928pt.
+<figures/ofel3_2.png, id=203, 450.9347pt x 227.34938pt>
+File: figures/ofel3_2.png Graphic file (type png)
+
+<use figures/ofel3_2.png>
+Package pdftex.def Info: figures/ofel3_2.png used on input line 108.
+(pdftex.def)             Requested size: 395.04854pt x 199.16928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/nemek.png, id=169, 458.46281pt x 259.7203pt>
-File: figures/nemek.png Graphic file (type png)
- <use figures/nemek.png>
-Package pdftex.def Info: figures/nemek.png used on input line 95.
-(pdftex.def)             Requested size: 351.57635pt x 199.16928pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/uru.png, id=170, 464.4853pt x 254.45062pt>
-File: figures/uru.png Graphic file (type png)
- <use figures/uru.png>
-Package pdftex.def Info: figures/uru.png used on input line 103.
-(pdftex.def)             Requested size: 363.587pt x 199.16928pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/erme.png, id=171, 460.72125pt x 218.31563pt>
-File: figures/erme.png Graphic file (type png)
- <use figures/erme.png>
-Package pdftex.def Info: figures/erme.png used on input line 112.
-(pdftex.def)             Requested size: 420.31853pt x 199.16928pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/tot.png>]
-[5 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/fogoly.png
-> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/nyul.png>]
-[6 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/nemek.png>
- <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/uru.png>]
-<figures/fogoly_jadex.png, id=191, 868.74562pt x 505.13719pt>
-File: figures/fogoly_jadex.png Graphic file (type png)
-
-<use figures/fogoly_jadex.png>
-Package pdftex.def Info: figures/fogoly_jadex.png used on input line 136.
-(pdftex.def)             Requested size: 342.53436pt x 199.16928pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 141.
- (E:\Programs\MikTex\tex\latex\psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-<figures/nyul_jadex.png, id=192, 612.78937pt x 500.62032pt>
-File: figures/nyul_jadex.png Graphic file (type png)
-
-<use figures/nyul_jadex.png>
-Package pdftex.def Info: figures/nyul_jadex.png used on input line 153.
-(pdftex.def)             Requested size: 243.793pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/nemek_jadex.png, id=193, 609.77812pt x 496.10344pt>
-File: figures/nemek_jadex.png Graphic file (type png)
-
-<use figures/nemek_jadex.png>
-Package pdftex.def Info: figures/nemek_jadex.png used on input line 170.
-(pdftex.def)             Requested size: 244.80945pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/uru_jadex.png, id=194, 611.28375pt x 498.36188pt>
-File: figures/uru_jadex.png Graphic file (type png)
-
-<use figures/uru_jadex.png>
-Package pdftex.def Info: figures/uru_jadex.png used on input line 187.
-(pdftex.def)             Requested size: 244.29463pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/erme_jadex.png, id=195, 612.03656pt x 499.8675pt>
-File: figures/erme_jadex.png Graphic file (type png)
-
-<use figures/erme_jadex.png>
-Package pdftex.def Info: figures/erme_jadex.png used on input line 204.
-(pdftex.def)             Requested size: 243.85771pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/erme.png> 
-<C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/fogoly_jadex.
-png>] [8 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/nyul
-_jadex.png>] <figures/voting_big.png, id=236, 408.77719pt x 243.91125pt>
-File: figures/voting_big.png Graphic file (type png)
-
-<use figures/voting_big.png>
-Package pdftex.def Info: figures/voting_big.png used on input line 228.
-(pdftex.def)             Requested size: 333.79604pt x 199.16928pt.
-
-<figures/voting_small.png, id=237, 630.85687pt x 442.65375pt>
-File: figures/voting_small.png Graphic file (type png)
-
-<use figures/voting_small.png>
-Package pdftex.def Info: figures/voting_small.png used on input line 235.
-(pdftex.def)             Requested size: 283.8541pt x 199.16928pt.
-
-<figures/voting_small2.png, id=238, 668.4975pt x 146.04562pt>
-File: figures/voting_small2.png Graphic file (type png)
-
-<use figures/voting_small2.png>
-Package pdftex.def Info: figures/voting_small2.png used on input line 241.
-(pdftex.def)             Requested size: 651.24692pt x 142.26378pt.
-
-Overfull \hbox (167.55005pt too wide) in paragraph at lines 241--242
- [] 
+Overfull \hbox (6.88005pt too wide) in paragraph at lines 116--123
+\T1/ptm/m/n/10.95 Térjünk most át az auk-ci-ók-ra! In-dít-son el leg-alább há-r
+om msc-lab01.votingauction_lab.BidderAgent.BidderAgent
  []
 
-[9 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/nemek_jade
-x.png> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/uru_ja
-dex.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (203.32132pt too wide) in paragraph at lines 116--123
+\T1/ptm/m/n/10.95 li-ci-tá-ló ágenst (pl. ba0 , ba1 , és ba2 né-ven) a auc-ti-o
+n01.cfg auk-ció kon-fi-gu-rá-ci-ó-val, il-let-ve egy msc-lab01.votingauction_la
+b.AuctioneerAgent.AuctioneerAgent
+ []
 
+[4 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel2.png>
+] [5 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel3_1.
+png> <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel3_2.
+png>] <figures/ofel4.png, id=220, 460.72125pt x 514.17094pt>
+File: figures/ofel4.png Graphic file (type png)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use figures/ofel4.png>
+Package pdftex.def Info: figures/ofel4.png used on input line 137.
+(pdftex.def)             Requested size: 178.46437pt x 199.16928pt.
+ [6 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/ofel4.png
+>]
+<figures/fel1.png, id=230, 453.94594pt x 191.21437pt>
+File: figures/fel1.png Graphic file (type png)
+ <use figures/fel1.png>
+Package pdftex.def Info: figures/fel1.png used on input line 165.
+(pdftex.def)             Requested size: 472.85457pt x 199.16928pt.
 
-[10 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/erme_jade
-x.png> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/voting
-_big.png>] <figures/voting_jadex.png, id=258, 609.77812pt x 498.36188pt>
-File: figures/voting_jadex.png Graphic file (type png)
+<figures/fel2.png, id=232, 450.18187pt x 186.6975pt>
+File: figures/fel2.png Graphic file (type png)
+ <use figures/fel2.png>
+Package pdftex.def Info: figures/fel2.png used on input line 186.
+(pdftex.def)             Requested size: 480.27478pt x 199.16928pt.
 
-<use figures/voting_jadex.png>
-Package pdftex.def Info: figures/voting_jadex.png used on input line 264.
-(pdftex.def)             Requested size: 243.69292pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/voting_sm
-all.png> <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/voti
-ng_small2.png>] <figures/auction.png, id=265, 474.27188pt x 380.92313pt>
-File: figures/auction.png Graphic file (type png)
-
-<use figures/auction.png>
-Package pdftex.def Info: figures/auction.png used on input line 277.
-(pdftex.def)             Requested size: 247.97607pt x 199.16928pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/voting_ja
-dex.png>] <figures/auction_jadex.png, id=281, 593.96906pt x 436.63126pt>
-File: figures/auction_jadex.png Graphic file (type png)
-
-<use figures/auction_jadex.png>
-Package pdftex.def Info: figures/auction_jadex.png used on input line 299.
-(pdftex.def)             Requested size: 270.93608pt x 199.16928pt.
+[7 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/fel1.png>]
+<figures/fel3.png, id=249, 443.40656pt x 187.45032pt>
+File: figures/fel3.png Graphic file (type png)
+ <use figures/fel3.png>
+Package pdftex.def Info: figures/fel3.png used on input line 207.
+(pdftex.def)             Requested size: 471.15213pt x 199.16928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [13 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/auction
-.png>] [14 <C:/Users/Csongor/git/GepiTanulasLabor/labor4/jegyzokonyv/figures/au
-ction_jadex.png>]
+[8 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/fel2.png>]
+<figures/fel4.png, id=261, 450.18187pt x 398.23781pt>
+File: figures/fel4.png Graphic file (type png)
+ <use figures/fel4.png>
+Package pdftex.def Info: figures/fel4.png used on input line 233.
+(pdftex.def)             Requested size: 225.14532pt x 199.16928pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/fel3.png>]
+<figures/fel5.png, id=273, 449.42906pt x 332.74312pt>
+File: figures/fel5.png Graphic file (type png)
+ <use figures/fel5.png>
+Package pdftex.def Info: figures/fel5.png used on input line 263.
+(pdftex.def)             Requested size: 269.01488pt x 199.16928pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [10 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/fel4.pn
+g>] [11 <C:/Users/Csongor/git/GepiTanulasLabor/labor5/jegyzokonyv/figures/fel5.
+png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
-
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\main.aux
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\titlepage.aux)
-(C:\Users\Csongor\git\GepiTanulasLabor\labor4\jegyzokonyv\content.aux))
+ (C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\main.aux
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\titlepage.aux)
+(C:\Users\Csongor\git\GepiTanulasLabor\labor5\jegyzokonyv\content.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 52156046C675067D1E4CB9241FA2E1E4;3385.
+(rerunfilecheck)             Checksum: 469F7794497EF28320E3F43CDE98DF2E;3787.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
- 11855 strings out of 493921
- 168025 string characters out of 3150960
- 269973 words of memory out of 3000000
- 14896 multiletter control sequences out of 15000+200000
+ 11784 strings out of 493921
+ 166407 string characters out of 3150960
+ 255004 words of memory out of 3000000
+ 14845 multiletter control sequences out of 15000+200000
  38711 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,43p,1361b,1147s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,43p,815b,1149s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/Programs/MikTex/fonts/enc/dvips/fontname/8r.enc}<E:/Programs/MikTex/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><E:/Programs/MikTex/fonts/type1/urw/courie
-r/ucrr8a.pfb><E:/Programs/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/Programs/
-MikTex/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (15 pages, 547126 bytes).
+/type1/urw/courier/ucrr8a.pfb><E:/Programs/MikTex/fonts/type1/urw/times/utmb8a.
+pfb><E:/Programs/MikTex/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (12 pages, 239601 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

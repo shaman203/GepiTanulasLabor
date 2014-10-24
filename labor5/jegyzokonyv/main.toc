@@ -2,25 +2,28 @@
 \select@language {magyar} \contentsline {section}{\numberline {2}Otthoni feladat 1}{2}{section.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1}Le\IeC {\'\i }r\IeC {\'a}s}{2}{subsection.2.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2}Megold\IeC {\'a}s}{2}{subsection.2.2}
-\select@language {magyar} \contentsline {section}{\numberline {3}Otthoni feladat 2}{4}{section.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1}Le\IeC {\'\i }r\IeC {\'a}s}{4}{subsection.3.1}
+\select@language {magyar} \contentsline {section}{\numberline {3}Otthoni feladat 2}{3}{section.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1}Le\IeC {\'\i }r\IeC {\'a}s}{3}{subsection.3.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2}Megold\IeC {\'a}s}{4}{subsection.3.2}
-\select@language {magyar} \contentsline {section}{\numberline {4}Otthoni feladat 3}{5}{section.4}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.1}Le\IeC {\'\i }r\IeC {\'a}s}{5}{subsection.4.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Megold\IeC {\'a}s}{6}{subsection.4.2}
-\select@language {magyar} \contentsline {section}{\numberline {5}Otthoni feladat 4}{6}{section.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.1}Le\IeC {\'\i }r\IeC {\'a}s}{6}{subsection.5.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Megold\IeC {\'a}s}{7}{subsection.5.2}
-\select@language {magyar} \contentsline {section}{\numberline {6}Labor feladat 1}{9}{section.6}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1}Le\IeC {\'\i }r\IeC {\'a}s}{9}{subsection.6.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2}Megold\IeC {\'a}s}{10}{subsection.6.2}
-\select@language {magyar} \contentsline {section}{\numberline {7}Labor feladat 2}{11}{section.7}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.1}Le\IeC {\'\i }r\IeC {\'a}s}{11}{subsection.7.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.2}Megold\IeC {\'a}s}{11}{subsection.7.2}
-\select@language {magyar} \contentsline {section}{\numberline {8}Labor feladat 3}{12}{section.8}
-\select@language {magyar} \contentsline {subsection}{\numberline {8.1}Le\IeC {\'\i }r\IeC {\'a}s}{12}{subsection.8.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {8.2}Megold\IeC {\'a}s}{12}{subsection.8.2}
-\select@language {magyar} \contentsline {section}{\numberline {9}Labor feladat 4}{12}{section.9}
-\select@language {magyar} \contentsline {subsection}{\numberline {9.1}Le\IeC {\'\i }r\IeC {\'a}s}{12}{subsection.9.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {9.2}Megold\IeC {\'a}s}{13}{subsection.9.2}
-\select@language {magyar} \contentsline {section}{\numberline {10}\IeC {\"O}sszefoglal\IeC {\'a}s}{13}{section.10}
+\select@language {magyar} \contentsline {section}{\numberline {4}Otthoni feladat 3}{4}{section.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1}Le\IeC {\'\i }r\IeC {\'a}s}{4}{subsection.4.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Megold\IeC {\'a}s}{4}{subsection.4.2}
+\select@language {magyar} \contentsline {section}{\numberline {5}Otthoni feladat 4}{5}{section.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1}Le\IeC {\'\i }r\IeC {\'a}s}{5}{subsection.5.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Megold\IeC {\'a}s}{6}{subsection.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {6}Labor feladat 1}{6}{section.6}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1}Le\IeC {\'\i }r\IeC {\'a}s}{6}{subsection.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2}Megold\IeC {\'a}s}{7}{subsection.6.2}
+\select@language {magyar} \contentsline {section}{\numberline {7}Labor feladat 2}{7}{section.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.1}Le\IeC {\'\i }r\IeC {\'a}s}{7}{subsection.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2}Megold\IeC {\'a}s}{7}{subsection.7.2}
+\select@language {magyar} \contentsline {section}{\numberline {8}Labor feladat 3}{8}{section.8}
+\select@language {magyar} \contentsline {subsection}{\numberline {8.1}Le\IeC {\'\i }r\IeC {\'a}s}{8}{subsection.8.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {8.2}Megold\IeC {\'a}s}{8}{subsection.8.2}
+\select@language {magyar} \contentsline {section}{\numberline {9}Labor feladat 4}{9}{section.9}
+\select@language {magyar} \contentsline {subsection}{\numberline {9.1}Le\IeC {\'\i }r\IeC {\'a}s}{9}{subsection.9.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {9.2}Megold\IeC {\'a}s}{9}{subsection.9.2}
+\select@language {magyar} \contentsline {section}{\numberline {10}Labor feladat 5}{10}{section.10}
+\select@language {magyar} \contentsline {subsection}{\numberline {10.1}Le\IeC {\'\i }r\IeC {\'a}s}{10}{subsection.10.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {10.2}Megold\IeC {\'a}s}{10}{subsection.10.2}
+\select@language {magyar} \contentsline {section}{\numberline {11}\IeC {\"O}sszefoglal\IeC {\'a}s}{11}{section.11}

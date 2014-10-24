@@ -33,7 +33,8 @@ Futattam az ágenseket a következő run config-ot használva:
 AAAAAA:msclab01.votingauction\_lab.VoterAgent.VoterAgent(mathias)
 BBBBBB:msclab01.votingauction\_lab.VoterAgent.VoterAgent(mandela)
 CCCCCC:msclab01.votingauction\_lab.VoterAgent.VoterAgent(mandela)
-DDDDDD:msclab01.votingauction\_lab.VoterAgent.VoterAgent(valakimas) vma:msclab01.votingauction_lab.VotingMechanismAgent.VotingMechanismAgent(cfg\backslash voting01.cfg)
+DDDDDD:msclab01.votingauction\_lab.VoterAgent.VoterAgent(valakimas) 
+vma:msclab01.votingauction_lab.VotingMechanismAgent.VotingMechanismAgent(cfg\backslash voting01.cfg)
 \end{lstlisting}
 \begin{figure}[!h]
 \begin{center}
@@ -49,7 +50,7 @@ DDDDDD:msclab01.votingauction\_lab.VoterAgent.VoterAgent(valakimas) vma:msclab01
 \end{figure}
 \begin{lstlisting}[caption=A log.txt tartalma, frame=single,float=!ht]
 [20:16:23:533]	ANNOUNCE	start
-[20:16:23:549]	ANNOUNCE	1 kennedy roosevelt mathias kossuth kádár gandhi mandela
+[20:16:23:549] 	ANNOUNCE 1 kennedy roosevelt mathias kossuth kadar gandhi mandela
 [20:16:23:565]	VOTE		BBBBBB	0 0 0 0 0 0 1
 [20:16:23:565]	VOTE		AAAAAA	0 0 1 0 0 0 0
 [20:16:23:580]	VOTE		CCCCCC	0 0 0 0 0 0 1
@@ -58,14 +59,14 @@ DDDDDD:msclab01.votingauction\_lab.VoterAgent.VoterAgent(valakimas) vma:msclab01
 \end{lstlisting}
 \begin{lstlisting}[caption=A rest.txt tartalma, frame=single,float=!ht]
 Name	Won
-----	---
+------ --
 DDDDDD	no
 BBBBBB	yes
 AAAAAA	no
 CCCCCC	yes
 \end{lstlisting}
 
-Az implementált szavazás egyfordulós többségi szavazás. Ennek a szavazásnak az a hátránya hogy a kisebbség döntheti el a kimenetelét. Tegyük fel hogy 2-en akarják az A jelöltet, és egy-egy szavazó akarja a B,C,D jelöltet, de semmiképp az A-t. Ebben az esetben a kisebbség akarata érvényespül és az A nyer.
+Az implementált szavazás egyfordulós többségi szavazás. Ennek a szavazásnak az a hátránya hogy a kisebbség döntheti el a kimenetelét. Tegyük fel hogy 2-en akarják az A jelöltet, és egy-egy szavazó akarja a B,C,D jelölteket, de semmiképp az A-t. Ebben az esetben a kisebbség akarata érvényespül és az A nyer.
 
 \section{Otthoni feladat 2}
 \subsection{Leírás}
@@ -109,12 +110,12 @@ hasonlóan, és foglalja össze, ill. magyarázza meg a különbségeket és has
 \caption{Minősített többségi szavazás győztessel}
 \end{center}
 \end{figure}
-A mínősített többségi elven működő szavazás elkerüli az egyszerű többségi szavazás hibáját, hogy a kisebbség dönt. Hátránya hogy több jelölt esetén valószínütlen, hogy egy jelölt eléri az 50%+1 szavazatot, így ez a szavazási módszer nem hírdet győztest.
+A mínősített többségi elven működő szavazás elkerüli az egyszerű többségi szavazás azon hibáját, hogy a kisebbség dönt. Hátránya hogy több jelölt esetén valószínütlen, hogy egy jelölt eléri az 50%+1 szavazatot, így ez a szavazási módszer nem hírdet győztest.
 
 \section{Otthoni feladat 4}
 \subsection{Leírás}
 Térjünk  most  át  az  aukciókra!  Indítson  el  legalább  három
-msclab01.votingauction_lab.BidderAgent.BidderAgent licitáló ágenst (pl.  ba0 ,
+msclab01.votingauction\_lab.BidderAgent.BidderAgent licitáló ágenst (pl.  ba0 ,
 ba1 , és  ba2 néven) a  auction01.cfg aukció
 konfigurációval,  illetve  egy
 msclab01.votingauction\_lab.AuctioneerAgent.AuctioneerAgent árverező
@@ -132,7 +133,6 @@ msclab01.votingauction\_lab.AuctioneerAgent.AuctioneerAgent árverező
 	magyarázza meg, hogy mit és miért csinált!
 \end{enumerate}
 \subsection{Megoldás}
-\end{figure}
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[height=7cm]{figures/ofel4.png}
@@ -269,3 +269,4 @@ Az ágensek itt csak akkor licitálnak, ha az aktuális licit <= sajátpénz - r
 
 
 \section{Összefoglalás}
+Jelen mérés során megismerkedtem különböző szavazási és aukciós módszerekkel, kipróbálván őket JADE ágensek segítségével. Mindegyiknek voltak előnyei és hátrányai, amiket figyelembe kell vegyünk ha használni akarjuk őket.
