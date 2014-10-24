@@ -808,7 +808,10 @@ public class JapAuctioneerAgent extends Agent implements IAuctioneerAgent {
 						// Fix an initial price for that good (of the chosen type)...
 						bid	= goodPrice.get(goodType).intValue();
 
-
+						agentsInRoom.clear();
+						//Add all agents to the room
+						agentsInRoom.addAll(bidderAgents);
+						
 						// Reset the state of the AnnounceAndWait behaviour instance (indirectly) to
 						// zero, i.e. "announce", now...
 						awBehaviour.setState(0);
