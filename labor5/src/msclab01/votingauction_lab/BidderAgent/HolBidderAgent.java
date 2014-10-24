@@ -329,9 +329,9 @@ public class HolBidderAgent extends Agent {
 							leaderName	= actualLeaderName;
 
 							// Primitive, very greedy bidding strategy...
-							Random rand = new Random();
+							Random rand = new Random(System.currentTimeMillis());
 							
-							if (myMoney - rand.nextInt(2) >= actualBid && actualLeaderName.isEmpty()) {
+							if (myMoney - rand.nextInt(4) >= actualBid && actualLeaderName.isEmpty()) {
 
 								ACLMessage reply = msg.createReply();
 								reply.setPerformative(ACLMessage.PROPOSE);
